@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="pt-br">
+	<head>
+		<title>Introdução</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../../assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Main -->
+			<div id="main">
+				<div class="inner">
+
+					<!-- Header -->
+					<div include-html="./../general-elements/header.html"></div>
+
+					<!-- Content -->                           
+					<section>
+						<header class="main">
+							<h1><a href="funcoes-escalares-tiles.html">Funções vetoriais de uma variável real</a></h1>
+							<h2>Introdução - Traço vs Gráfico</h2>
+						</header>
+					</section>
+
+					<section>
+						<p>
+							<b>Definição</b>
+							<br>
+							Uma função vetorial $F$ de uma variável real é uma correspondência, $F: \operatorname{Dom}(F) \subseteq \mathbb{R} \longrightarrow \mathbb{R}^{m}$, 
+							que a cada ponto $t \in D o m(F)$, associa um e apenas um $X=\left(x_{1}, x_{2}, \ldots, x_{m}\right) \in \mathbb{R}^{m} .$ O conjunto $\operatorname{Dom}(F)$ 
+							é chamado de domínio de $F$ e é o maior conjunto onde $F$ é definida.
+							<br>
+							Inicialmente apresentaremos exemplos de funções vetoriais com imagem em $\mathbb{R}^{2}$, isto é, $F: \operatorname{Dom}(F) \subseteq \mathbb{R} \rightarrow \mathbb{R}^{2}$, 
+							aonde para cada $t \in \operatorname{Dom}(F), F(t)=(x, y)$.
+							<br>
+							Posteriormente, apresentaremos exemplos de funções vetoriais com imagem em $\mathbb{R}^{3}$, isto é, $F: \operatorname{Dom}(F) \subseteq \mathbb{R} \longrightarrow \mathbb{R}^{3}$, 
+							tal que para cada $t \mapsto F(t)=(x, y, z)$, onde $t \in \operatorname{Dom}(F)$.
+							De uma maneira cotidiana, chamamos a função $F$ de $\vec{r}$ ou $r$, como pode-se ver na seção abaixo.
+						<p>
+							<b>Traço X Gráfico</b>
+							<br>
+							Não podemos confundir esses dois termos. Considere uma função da forma:
+							$$
+							F: \operatorname{Dom}(F) \subseteq \mathbb{R} \longrightarrow \mathbb{R}^{2}, \text { tal que } t \mapsto(x(t), y(t))
+							$$
+							O conjunto $\operatorname{Im}(F)=\left\{(x(t), y(t)) \in \mathbb{R}^{2} \mid t \in \operatorname{Dom}(F)\right\}$ é chamado conjunto imagem da função vetorial de uma 
+							variável $F$. Note que é um conjunto de $\mathbb{R}^{2}$. Por outro lado, o conjunto $G(F)=\left\{(t, x(t), y(t)) \in \mathbb{R}^{3} \mid t \in \operatorname{Dom}(F)\right\}$ 
+							representa o gráfico da mesma função. Note que desta vez, o conjunto está em $\mathbb{R}^{3}$, ou seja, diferente da dimensão da imagem.
+							<br>
+							Os exemplos abaixo trazem a ideia abordada nesta seção. Note que na tela da esquerda, está presente a imagem da função vetorial. Por outro lado, na tela direita 
+							há o gráfico da mesma função vetorial.
+						</p>
+					</section>
+
+					<!--
+					<section>
+						<h3>Caderno base da matéria</h3>
+						<p>
+							<br>
+							Clique na imagem abaixo para acessar o texto da disciplina:
+							<br>
+							<a href="../../assets/pdf/apostila/aproximacao-de-funcoes.pdf" target="_blank"><img class="imgSize500px" width="100%" src="./../../images/apostila/aproximacao-de-funcoes.jpg"></img></a>
+							<br>
+							<a href="../../assets/pdf/apostila/derivadas-ordem-superior.pdf" target="_blank"><img class="imgSize500px" width="100%" src="./../../images/apostila/derivadas-parciais-de-ordem-superior.jpg"></img></a>
+						</p>
+					</section>
+
+					<section>
+						<h3>Vídeoaulas</h3>
+						<ul class="actions" align="left"  style="display: block;margin-left: auto;margin-right: auto;" >
+							<li><a href="https://drive.google.com/file/d/1qpAEpFiTLxI4Be1H1LdK8_LTufrocZF8/view" 
+								class="button small video" style="height: auto;">Assista o vídeo sobre Diferenciabilidade I</a>
+							</li>
+							<li><a href="https://drive.google.com/file/d/1qYTB9s-P-AG5Uv7Ai_KSV-ZdRJ--FtIV/view" 
+								class="button small video" style="height: auto;">Assista o vídeo sobre Diferenciabilidade II</a>
+							</li>
+							<li><a href="https://drive.google.com/file/d/1qYVWgAthRosZazpvksrproA3T_1WNSkd/view" 
+								class="button small video" style="height: auto;">Assista o vídeo sobre Diferenciabilidade III</a>
+							</li>
+							<li><a href="https://drive.google.com/file/d/17OmRP8vbUxC15JA0Pu2IutytpeZ30IEa/view" 
+								class="button small video" style="height: auto;">Assista o vídeo sobre Continuidade</a>
+							</li>
+							<li><a href="https://drive.google.com/file/d/1g-pMwaFG_gwdpE0diB84qDRd9cCS6xzt/view" 
+								class="button small video" style="height: auto;">Assista o vídeo sobre Plano tangente e reta normal - Teoria</a>
+							</li>
+							<li><a href="https://drive.google.com/file/d/1TaMfam1R2xpyyysobsj3PAJQDl_5v692/view" 
+								class="button small video" style="height: auto;">Assista o vídeo sobre Plano tangente e reta normal - Exercícios</a>
+							</li>
+							<li><a href="https://drive.google.com/file/d/1Wa3YJR7v9LC6zqtJh4bbzcN_5Nz6SraS/view" 
+								class="button small video" style="height: auto;">Assista o vídeo sobre Aproximação afim e diferencial - Teoria</a>
+							</li>
+							<li><a href="https://drive.google.com/file/d/1ERT5N1orDgXnYfU_WGRq0-L3meeIAxY1/view" 
+								class="button small video" style="height: auto;">Assista o vídeo sobre Aproximação afim e diferencial - Exercícios</a>
+							</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Exemplos</h3>
+						<p>
+							...
+						</p>
+					</section>
+					-->
+					<section>
+						<h3>Recursos computacionais</h3>
+						<p>
+							<b>Traço vs Gráfico</b>
+							Os exemplos abaixo trazem a ideia abordada nesta seção. Note que na tela da esquerda, está presente a imagem 
+							da função vetorial. Por outro lado, na tela direita há o gráfico da mesma função vetorial.
+							<br>
+							<a href="https://www.geogebra.org/m/zyee3yry" target="_blank">Livro Geogebra</a>
+							<a href="//www.geogebra.org/material/iframe/id/ufh4a4s4/width/1099/height/616/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/true/ld/false/sdz/true/ctl/false"
+							target="_blank"><img class="imgSize700px" height=500 width="100%"style="margin-left: 0px;" src="./../../images/applets-view/funcao-uma-variaveis-traco-vs-grafico.jpg"></a>	
+						</p>
+					</section>
+				</div>
+			</div>
+
+			<!-- Sidebar -->
+			<div id="sidebar">
+				<div class="inner"  include-html="../general-elements/sidebar.html">
+				<a href="#sidebar" class="toggle">Toggle</a>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<!-- adicionados -->
+		<script src="../../assets/js/includeHTML.js"></script>
+		<script>includeHTML();</script>
+		<script src="../../assets/js/load-mathjax.js" async></script>
+		<!-- originais -->
+		<script src="../../assets/js/jquery.min.js"></script>
+		<script src="../../assets/js/browser.min.js"></script>
+		<script src="../../assets/js/breakpoints.min.js"></script>
+		<script src="../../assets/js/util.js"></script>
+		<script src="../../assets/js/main.js"></script>
+	</body>
+</html>
