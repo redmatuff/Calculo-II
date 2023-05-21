@@ -1,0 +1,121 @@
+/* TODO: APAGAR O QUE NÃO FOI USADO AQUI E NO HTML */
+
+/* Posicionalmento dos Títulos e Imagens */
+.container-titulos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titulos {}
+
+.img-titulo {}
+
+.img-titulo img {
+    height: 30vw;
+    max-height: 17rem;
+    min-height: 12rem;
+}
+
+/* Posicionamento dos Elementos na página */
+.container-principal{
+    display: flex;
+}
+
+.box{
+    flex: 1;
+    margin: 3rem;    
+}
+
+
+
+
+
+/* Nav */
+nav section {
+    padding: 2rem 2rem 2rem 3rem; /*Compensar Identação*/
+    box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.3);
+    margin: 4%;
+    overflow: hidden;
+    height: 3.2rem;
+}
+
+.nav-list .nav-list{
+    padding: 0 0 0 1rem; /* Identação */
+    visibility: hidden;
+}
+
+.nav-list li {
+    font-family: 'Reem';
+    font-weight: 600;
+    list-style: none;
+    list-style-position: outside;
+    padding: 0;
+    color: #546674;
+
+}
+
+.nv1{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin: 0rem 0rem 1rem -1rem;
+}
+.nv2 {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    margin: 3rem 0rem 1rem -0.5rem;
+}
+.nv3{
+    font-size: 1rem;
+    line-height: 1.1rem;
+    margin: 1rem 0rem 1rem 0rem;
+
+}
+.nav-list .nvf {
+    font-size: 1rem;
+    line-height: 1.1rem;
+    background-image: linear-gradient(to right, #af3636, rgb(255, 146, 4));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0.3);
+    font-weight: 100;
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 0.5rem 0;
+}
+
+
+#sc1{
+    background-image: radial-gradient(rgba(255, 255, 255, 0.301), #09867579);
+}
+#sc2{
+    background-image: radial-gradient(rgba(255, 255, 255, 0.432), rgba(124, 67, 67, 0.425));
+}
+#sc3{
+    background-image: radial-gradient(rgba(255, 255, 0, 0.151), rgba(0, 0, 255, 0.308));
+}
+#sc4{
+    background-image: radial-gradient(rgba(255, 255, 255, 0.274), #a136af31);
+}
+#sc5 {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.274), #66af3631);
+}
+
+
+.nvf:hover {
+    transform: scale(107%);
+    background-image: radial-gradient(black, red, black);
+}
+
+
+
+.tiles{
+    height: 3.2rem;
+    transition: height 0s ease-in-out;
+}
+.tiles.expandido {
+    height: 100%;
+}
+.tiles.expandido .nav-list{
+    visibility: visible;
+}

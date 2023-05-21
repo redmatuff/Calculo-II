@@ -1,0 +1,129 @@
+@font-face{
+    font-family: 'Caveat';
+    src: url('../font/Caveat/Caveat-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Reem';
+    src: url('../font/Reem_Kufi_Fun/ReemKufiFun-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto/Roboto-Regular.ttf');
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+}
+header h1 {
+    margin: 1rem 0.2rem 0.2rem 0.2rem;
+    font-size: 1.5rem;
+}
+header h2 {
+    margin: 0.2rem;
+    font-size: 1.1rem;
+    color: #b7c2ca;
+}
+header div { 
+    width: 85%;
+}
+header hr {
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 0, 0.514),rgba(69, 85, 139, 0.5),rgba(107, 107, 107, 0.452));
+    border: none;
+}
+
+
+footer{
+    color: white;
+    display: flex;
+    align-items: center;
+    height: 20rem;
+    background-color: rgb(58,76,126);
+    background-image: linear-gradient(rgb(58, 76, 126),rgb(18, 30, 61));
+}
+footer div{
+    min-width: 25%;
+}
+footer div p{
+    text-align: center;
+    margin: 2rem;
+}
+
+#ft-col1{
+
+}
+
+
+body {
+    color: #6e7880;
+    font-family: 'Roboto';
+    letter-spacing: 0.1rem;
+    font-weight: 100;
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container-principal {
+    flex-grow: 1;
+
+}
+
+#cor-fundo {
+    position: fixed;
+    top:60vh;
+    width: 100vw;
+    height: 40vh;
+    z-index: -1;
+    background-image: linear-gradient(to top , rgba(185, 99, 0, 0.479), rgba(255, 255, 255, 0.37));
+}
+
+h1,
+h2 {
+    font-family: 'Reem';
+    font-weight: 600;
+
+    /*TODO: Aplicar alteração de cores no JS caso webkit esteja disponivel no navegador*/
+    background-image: linear-gradient(to right, #73797e, rgb(88, 88, 155));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
+}
+
+h1 {
+    font-size: 4.5rem;
+    line-height: 1.3;
+    margin: 1rem 5rem;
+}
+
+h2 {
+    font-size: 1rem;
+    margin: 1rem 5rem;
+}
+
+p{
+    margin: 1rem 0;
+    /* text-indent: 3rem; */
+    text-align: justify;
+}
+
+ol,
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+}
+
+li {
+    padding: 0.5rem 1rem;
+}
+
+strong{
+    font-weight: 700;
+}
