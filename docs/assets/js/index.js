@@ -58,7 +58,6 @@ document.addEventListener('click', function(event) {
     qualEstavaExpandido = qualEstaExpandido;
 
 
-
 });
 
 

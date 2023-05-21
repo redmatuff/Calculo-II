@@ -40,19 +40,44 @@ header hr {
 footer{
     color: white;
     display: flex;
-    align-items: center;
-    height: 20rem;
+    padding: 2rem 0 0 0;
+    min-height: 17rem;
     background-color: rgb(58,76,126);
     background-image: linear-gradient(rgb(58, 76, 126),rgb(18, 30, 61));
 }
 footer div{
-    min-width: 25%;
+    min-width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 footer div p{
     text-align: center;
-    margin: 2rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
+#ft-col3 div{
+    margin: 0 0 2rem 0;
+}
+footer .logo-uff{
+    width: 7rem;
+    margin: 0.5rem;
+}
+footer .logos-redes-soc{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.logos-redes-soc img {
+    margin: 0.5rem 0.5rem;
+    width: 50px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+}
+footer #email {
+    font-style: italic;
+}
 
 body {
     background-color: white;
@@ -71,14 +96,14 @@ body {
     flex-grow: 1;
 }
 
-/* #cor-fundo {
+#cor-fundo {
     position: fixed;
     top:60vh;
     width: 100%;
     height: 40vh;
     z-index: -1;
     background-image: linear-gradient(to top , rgba(185, 99, 0, 0.479), rgba(255, 255, 255, 0.37));
-} */
+}
 
 h1,
 h2 {
@@ -90,7 +115,6 @@ h2 {
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); */
 }
 
 h1 {
@@ -122,4 +146,12 @@ li {
 
 strong{
     font-weight: 700;
+}
+
+
+/* Responsividade do Footer */
+@media (max-width: 700px) {
+    footer{
+        flex-direction: column;
+    }
 }

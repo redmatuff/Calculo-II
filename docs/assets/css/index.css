@@ -113,9 +113,14 @@ nav section {
 }
 
 /* Responsividade */
-@media (max-width: 800px) {
+@media (max-width: 920px) {
     .container-principal{
         flex-direction: column;
-    }    
+    }
+    .container-titulos{
+        flex-direction: column;
+    }
+    
+
 
 }
