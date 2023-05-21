@@ -6,47 +6,56 @@ const sc2 = document.querySelector('#sc2');
 const sc3 = document.querySelector('#sc3');
 const sc4 = document.querySelector('#sc4');
 const sc5 = document.querySelector('#sc5');
-
+var qualEstavaExpandido = 0;
 
 
 document.addEventListener('click', function(event) {
+    var qualEstaExpandido = 0;
     if(sc1.contains(event.target)) {
         sc1.classList.add('expandido');
+        qualEstaExpandido = 1;
     }else{
         sc1.classList.remove('expandido');
     }
     if(sc2.contains(event.target)) {
         sc2.classList.add('expandido');
+        qualEstaExpandido = 2;
     }else{
         sc2.classList.remove('expandido');
     }
     if(sc3.contains(event.target)) {
         sc3.classList.add('expandido');
+        qualEstaExpandido = 3;
     }else{
         sc3.classList.remove('expandido');
     }
     if(sc4.contains(event.target)) {
         sc4.classList.add('expandido');
+        qualEstaExpandido = 4;
     }else{
         sc4.classList.remove('expandido');
     }
     if(sc5.contains(event.target)) {
         sc5.classList.add('expandido');
+        qualEstaExpandido = 5;
     }else{
         sc5.classList.remove('expandido');
     }
-    if(sc1.contains(event.target)) {
+
+
+    if(sc1.contains(event.target) && qualEstavaExpandido != 1) {
         scrollToCenter(sc1);
-    }else if(sc2.contains(event.target)) {
+    }else if(sc2.contains(event.target) && qualEstavaExpandido != 2) {
         scrollToCenter(sc2);
-    }else if(sc3.contains(event.target)) {
+    }else if(sc3.contains(event.target) && qualEstavaExpandido != 3) {
         scrollToCenter(sc3);
-    }else if(sc4.contains(event.target)) {
+    }else if(sc4.contains(event.target) && qualEstavaExpandido != 4) {
         scrollToCenter(sc4);
-    }else if(sc5.contains(event.target)) {
+    }else if(sc5.contains(event.target) && qualEstavaExpandido != 5) {
         scrollToCenter(sc5);
     }
 
+    qualEstavaExpandido = qualEstaExpandido;
 
 
 

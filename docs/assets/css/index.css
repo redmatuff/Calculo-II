@@ -28,9 +28,6 @@
 }
 
 
-
-
-
 /* Nav */
 nav section {
     padding: 2rem 2rem 2rem 3rem; /*Compensar Identação*/
@@ -52,7 +49,6 @@ nav section {
     list-style-position: outside;
     padding: 0;
     color: #546674;
-
 }
 
 .nv1{
@@ -84,7 +80,6 @@ nav section {
     margin: 0.5rem 0;
 }
 
-
 #sc1{
     background-image: radial-gradient(rgba(255, 255, 255, 0.301), #09867579);
 }
@@ -101,13 +96,10 @@ nav section {
     background-image: radial-gradient(rgba(255, 255, 255, 0.274), #66af3631);
 }
 
-
 .nvf:hover {
     transform: scale(107%);
     background-image: radial-gradient(black, red, black);
 }
-
-
 
 .tiles{
     height: 3.2rem;
@@ -118,4 +110,12 @@ nav section {
 }
 .tiles.expandido .nav-list{
     visibility: visible;
+}
+
+/* Responsividade */
+@media (max-width: 800px) {
+    .container-principal{
+        flex-direction: column;
+    }    
+
 }
