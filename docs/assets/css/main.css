@@ -53,10 +53,6 @@ footer div p{
     margin: 2rem;
 }
 
-#ft-col1{
-
-}
-
 
 body {
     color: #6e7880;
@@ -72,17 +68,16 @@ body {
 
 .container-principal {
     flex-grow: 1;
-
 }
 
-#cor-fundo {
+/* #cor-fundo {
     position: fixed;
     top:60vh;
-    width: 100vw;
+    width: 100%;
     height: 40vh;
     z-index: -1;
     background-image: linear-gradient(to top , rgba(185, 99, 0, 0.479), rgba(255, 255, 255, 0.37));
-}
+} */
 
 h1,
 h2 {

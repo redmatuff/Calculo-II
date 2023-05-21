@@ -95,7 +95,11 @@ function scrollToCenter(element) {
   const elementHeight = element.offsetHeight;
 
   // Calcula a posição desejada para o elemento ficar centralizado na tela
-  const desiredScroll = element.offsetTop - 0* (windowHeight - elementHeight) / 2;
+  var centraliza = 0
+  if (windowHeight > elementHeight) {
+    centraliza = 1
+  }
+  const desiredScroll = element.offsetTop - centraliza * (windowHeight - elementHeight) / 2;
 
   // Rola a página até a posição desejada
   window.scrollTo({
