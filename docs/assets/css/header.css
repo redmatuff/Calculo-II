@@ -34,3 +34,13 @@ header hr {
     background-image: linear-gradient(to right, rgba(255, 255, 0, 0.514), rgba(69, 85, 139, 0.5), rgba(107, 107, 107, 0.452));
     border: none;
 }
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 4vw;
+    }
+
+    header h2 {
+        font-size: 3vw;
+    }
+}

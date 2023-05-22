@@ -113,7 +113,7 @@ nav a{
 }
 
 .nvf a:hover {
-    background-image: radial-gradient(black, red, blue);
+    <link rel="stylesheet" href="assets/css/index.css">    background-image: radial-gradient(black, red, blue);
 }
 
 .tiles{
@@ -136,6 +136,25 @@ nav a{
         flex-direction: column;
     }
 
+}
 
+@media (max-width: 475px) {
+    .tiles{
+        height: 6.5rem;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    .nv1 {
+        font-size: 4.9vw;
+    }
+    .nv2{
+        font-size: 3.5vw;
+    }
+    .nv3 {
+        font-size: 3vw;
+    }
+    .nav-list .nvf{
+        font-size: 3vw;
+    }
 
 }
