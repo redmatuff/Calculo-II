@@ -1,12 +1,12 @@
 const conteudoHeader = `
-    <header>
-		<div>
-			<!-- <img src="assets/img/header/logo-ime.png" alt="Logo do IME"> -->
-			<h1>Instituto de Matemática e Estatística</h1>
-			<h2>Universidade Federal Fluminense</h2>
-			<hr>
-		</div>
-	</header>
+        <header>
+            <div>
+                <!-- <img src="assets/img/header/logo-ime.png" alt="Logo do IME"> -->
+                <h1><a href="https://www.uff.br/?q=setor/instituto-de-matematica-e-estatistica">Instituto de Matemática e Estatística</a></h1>
+                <h2><a href="https://www.uff.br">Universidade Federal Fluminense</a></h2>
+                <hr>
+            </div>
+        </header>
 `;
 
 try {

@@ -1,0 +1,42 @@
+.container-titulos h1,
+.container-titulos h2 {
+    font-family: 'Reem';
+    font-weight: 600;
+
+    /*TODO: Aplicar alteração de cores no JS caso webkit esteja disponivel no navegador*/
+    background-image: linear-gradient(to right, #73797e, rgb(88, 88, 155));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.container-titulos h1 a {
+    /*TODO: Aplicar alteração de cores no JS caso webkit esteja disponivel no navegador*/
+    background-image: linear-gradient(to right, #73797e, rgb(88, 88, 155));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.container-titulos h1 {
+    font-size: 4.5rem;
+    line-height: 1.3;
+    margin: 1rem 0rem 1rem 5rem;
+}
+
+.container-titulos h2 {
+    font-size: 1rem;
+    margin: 1rem 5rem;
+}
+.container-titulos h1 a {
+    font-style: normal;
+}
+
+@media (max-width: 600px) {
+    .container-titulos h1 {
+        font-size: 10vw;
+    }
+
+    .container-titulos h2 {
+        font-size: 2.5vw;
+    }
+}
