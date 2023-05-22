@@ -13,72 +13,6 @@
     src: url('../font/Roboto/Roboto-Regular.ttf');
 }
 
-
-header {
-    display: flex;
-    justify-content: center;
-}
-header h1 {
-    margin: 1rem 0.2rem 0.2rem 0.2rem;
-    font-size: 1.5rem;
-}
-header h2 {
-    margin: 0.2rem;
-    font-size: 1.1rem;
-    color: #b7c2ca;
-}
-header div { 
-    width: 85%;
-}
-header hr {
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 0, 0.514),rgba(69, 85, 139, 0.5),rgba(107, 107, 107, 0.452));
-    border: none;
-}
-
-
-footer{
-    color: white;
-    display: flex;
-    padding: 2rem 0 0 0;
-    min-height: 17rem;
-    background-color: rgb(58,76,126);
-    background-image: linear-gradient(rgb(58, 76, 126),rgb(18, 30, 61));
-}
-footer div{
-    min-width: 27%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-footer div p{
-    text-align: center;
-    margin: 0.5rem;
-    padding: 0.5rem;
-}
-
-#ft-col3 div{
-    margin: 0 0 2rem 0;
-}
-footer .logo-uff{
-    width: 7rem;
-    margin: 0.5rem;
-}
-footer .logos-redes-soc{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-}
-.logos-redes-soc img {
-    margin: 0.5rem 0.5rem;
-    width: 50px;
-    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
-}
-footer #email {
-    font-style: italic;
-}
-
 body {
     background-color: white;
     color: #6e7880;
@@ -122,16 +56,26 @@ h1 {
     line-height: 1.3;
     margin: 1rem 5rem;
 }
-
 h2 {
     font-size: 1rem;
     margin: 1rem 5rem;
+}
+h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
 }
 
 p{
     margin: 1rem 0;
     /* text-indent: 3rem; */
     text-align: justify;
+}
+
+a {
+    color: #6e7880;
+    text-decoration: none;
+    font-style: italic;
 }
 
 ol,
@@ -149,9 +93,3 @@ strong{
 }
 
 
-/* Responsividade do Footer */
-@media (max-width: 700px) {
-    footer{
-        flex-direction: column;
-    }
-}

@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Caveat';
+    src: url('../font/Caveat/Caveat-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto/Roboto-Regular.ttf');
+}
+
+footer {
+    color: white;
+    display: flex;
+    padding: 2rem 0 0 0;
+    min-height: 17rem;
+    background-color: rgb(58, 76, 126);
+    background-image: linear-gradient(rgb(58, 76, 126), rgb(18, 30, 61));
+    font-family: 'Roboto';
+    letter-spacing: 0.1rem;
+    line-height: 1.5rem;
+    font-size: 0.9rem;
+}
+
+footer div {
+    min-width: 27%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer div p {
+    text-align: center;
+    margin: 0.5rem;
+    padding: 0.5rem;
+}
+
+#ft-col3 div {
+    margin: 0 0 2rem 0;
+}
+
+#ft-col2 {
+    font-family: 'Caveat';
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+footer .logo-uff {
+    width: 7rem;
+    margin: 0.5rem;
+}
+
+footer .logos-redes-soc {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.logos-redes-soc img {
+    margin: 0.5rem 0.5rem;
+    width: 50px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+}
+
+footer #email {
+    font-style: italic;
+}
+
+/* Responsividade do Footer */
+@media (max-width: 700px) {
+    footer {
+        flex-direction: column;
+    }
+}

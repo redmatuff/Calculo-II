@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Reem';
+    src: url('../font/Reem_Kufi_Fun/ReemKufiFun-VariableFont_wght.ttf');
+}
+
+header {
+    background-color: white;
+    color: #6e7880;
+    font-family: 'Reem';
+    letter-spacing: 0.1rem;
+    font-weight: 100;
+    line-height: 1.6rem;
+    display: flex;
+    justify-content: center;
+}
+
+header h1 {
+    margin: 1rem 0.2rem 0.2rem 0.2rem;
+    font-size: 1.5rem;
+}
+
+header h2 {
+    margin: 0.2rem;
+    font-size: 1.1rem;
+    color: #b7c2ca;
+}
+
+header div {
+    width: 85%;
+}
+
+header hr {
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 0, 0.514), rgba(69, 85, 139, 0.5), rgba(107, 107, 107, 0.452));
+    border: none;
+}

@@ -44,6 +44,7 @@ nav section {
 
 .nav-list li {
     font-family: 'Reem';
+    /* font-family: 'Caveat'; */
     font-weight: 600;
     list-style: none;
     list-style-position: outside;
@@ -53,22 +54,26 @@ nav section {
 
 .nv1{
     font-size: 1.5rem;
+    /* font-size: 2rem; */
     line-height: 2rem;
     margin: 0rem 0rem 1rem -1rem;
 }
 .nv2 {
     font-size: 1.1rem;
+    /* font-size: 1.6rem; */
     line-height: 1.2rem;
     margin: 3rem 0rem 1rem -0.5rem;
 }
 .nv3{
     font-size: 1rem;
+    /* font-size: 1.4rem; */
     line-height: 1.1rem;
     margin: 1rem 0rem 1rem 0rem;
 
 }
 .nav-list .nvf {
     font-size: 1rem;
+    /* font-size: 1.2rem; */
     line-height: 1.1rem;
     background-image: linear-gradient(to right, #af3636, rgb(255, 146, 4));
     background-clip: text;
@@ -78,6 +83,13 @@ nav section {
     list-style-type: disc;
     list-style-position: inside;
     margin: 0.5rem 0;
+}
+
+nav a{
+    background-image: linear-gradient(to right, #af3636, rgb(255, 146, 4));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 #sc1{
@@ -98,7 +110,10 @@ nav section {
 
 .nvf:hover {
     transform: scale(107%);
-    background-image: radial-gradient(black, red, black);
+}
+
+.nvf a:hover {
+    background-image: radial-gradient(black, red, blue);
 }
 
 .tiles{
@@ -120,7 +135,7 @@ nav section {
     .container-titulos{
         flex-direction: column;
     }
-    
+
 
 
 }

@@ -1,8 +1,9 @@
 <!-- TODO:
-	1. Alterar conteúdo do footer
-	2. Adicionar links em cada página
-	3. Adicionar logos no footer para uff, redes sociais, etc.
-	4. Descobrir por que esta aparecendo barra de rolagem horizontal na responsividade
+	1. Criar Páginas de Direitos Autorais
+	2. Adicionar links nos logos, na historia e nos direitos autorais do footer.
+	3. Criar Paginas do Projeto
+	4. Adicionar links para páginas do nav
+	5. Descobrir por que esta aparecendo barra de rolagem horizontal na responsividade de telas pequenas
  -->
 
 <!DOCTYPE html>
@@ -14,23 +15,14 @@
 	<title>Cálculo 2 IME-UFF</title>
 	<link rel="stylesheet" href="assets/css/reset.css">
 	<link rel="stylesheet" href="assets/css/main.css">
+	<link rel="stylesheet" href="assets/css/header.css">
+	<link rel="stylesheet" href="assets/css/footer.css">
 	<link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
 
-
 	<div id="cor-fundo"></div>
-
-
-	<header>
-		<div>
-			<!-- <img src="assets/img/header/logo-ime.png" alt="Logo do IME"> -->
-			<h1>Instituto de Matemática e Estatística</h1>
-			<h2>Universidade Federal Fluminense</h2>
-			<hr>
-		</div>
-	</header>
-
+	<div class="header"></div>
 
 	<div class="container-titulos">
 		<div class="titulos">
@@ -133,7 +125,7 @@
 					<section class="tiles" id="sc2">
 						<li class="nv1">Apostilas, Listas e Gabaritos</li>
 						<ul class="nav-list">
-							<li class="nvf">Ir para Página com Arquivos em PDF</li>
+							<li class="nvf"><a href="pages/outras/apostilas-listas-gabaritos.html">Ir para Página com Arquivos em PDF</a></li>
 						</ul>
 					</section>
 
@@ -190,27 +182,11 @@
 		</div>
 	</div>
 
-
-	<footer>
-		<div id="ft-col1">
-			<p>História do Projeto</p>
-			<p id="email">redmatuff@gmail.com</p>
-			<p>Direitos Autorais</p>
-		</div>
-		<div id="ft-col2">
-
-			<p>Descubra a matemática em uma nova dimensão, com o poder da tecnologia ao seu lado. Explore recursos interativos e ferramentas digitais para aprimorar seu aprendizado. Desvende conceitos complexos e desafie seus limites. Deixe a tecnologia elevar sua compreensão e ampliar sua visão da matemática. Navegue por um mundo de possibilidades e conquiste o domínio dessa ciência fascinante.</p>
-		</div>
-		<div id="ft-col3">
-			<!-- <p>Páginas Relacionadas</p> -->
-			<div><img class="logo-uff" src="assets/img/footer/uffIncon.png" alt="Logo da UFF"></div>
-			<div class="logos-redes-soc">
-				<img src="assets/img/footer/InstaIncon.png" alt="Logo Instagram">
-				<img src="assets/img/footer/ytIncon.png" alt="Logo YouTube">
-				<img src="assets/img/footer/geogebraIncon2.png" alt="Logo Geogebra">
-			</div>
-		</div>
-	</footer>
+	<div class="footer"></div>
 </body>
+
 <script src="assets/js/index.js"></script>
+<script src="assets/js/insere-header.js"></script>
+<script src="assets/js/insere-footer.js"></script>
+
 </html>
