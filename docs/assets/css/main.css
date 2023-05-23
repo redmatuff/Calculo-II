@@ -35,6 +35,7 @@ body {
 
 
 #cor-fundo {
+    background-attachment: fixed;
     position: fixed;
     top:0;
     width: 100%;
