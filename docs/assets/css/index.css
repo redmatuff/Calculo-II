@@ -1,15 +1,18 @@
 /* TODO: APAGAR O QUE NÃO FOI USADO AQUI E NO HTML */
 
 /* Posicionalmento dos Títulos e Imagens */
-.container-titulos {
+.container-titulos div {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
-.titulos {}
+.container-titulos div .img-titulo {
+    width: 30vw;
+}
 
-.img-titulo {}
+.titulos {
+    flex-direction: column;
+    margin: 1.5rem 0 0 0;
+}
 
 .img-titulo img {
     height: 30vw;
@@ -20,6 +23,9 @@
 /* Posicionamento dos Elementos na página */
 .container-principal{
     display: flex;
+}
+.container-principal {
+    margin: 0rem;
 }
 
 .box{
@@ -85,6 +91,10 @@ nav section {
     margin: 0.5rem 0;
 }
 
+li {
+    padding: 0.5rem 1rem;
+}
+
 nav a{
     background-image: linear-gradient(to right, #af3636, rgb(255, 146, 4));
     background-clip: text;
@@ -132,8 +142,13 @@ nav a{
     .container-principal{
         flex-direction: column;
     }
-    .container-titulos{
+    .container-titulos div {
         flex-direction: column;
+        width: 85vw;
+    }
+    .container-titulos div .img-titulo{
+        align-items: center;
+        width: auto;
     }
 
 }

@@ -1,3 +1,13 @@
+.container-titulos {
+    display: flex;
+    justify-content: center;
+    
+}
+.container-titulos div {
+    width: 85%;
+}
+
+
 .container-titulos h1,
 .container-titulos h2 {
     font-family: 'Reem';
@@ -20,12 +30,12 @@
 .container-titulos h1 {
     font-size: 4.5rem;
     line-height: 1.3;
-    margin: 1rem 0rem 1rem 5rem;
+    margin: 3rem 0rem 0rem 0rem;
 }
 
 .container-titulos h2 {
     font-size: 1rem;
-    margin: 1rem 5rem;
+    margin: 1rem 0rem;
 }
 .container-titulos h1 a {
     font-style: normal;

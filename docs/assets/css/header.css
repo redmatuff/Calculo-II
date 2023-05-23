@@ -31,12 +31,13 @@ header h2 a {
 header h1 {
     margin: 1rem 0.2rem 0.2rem 0.2rem;
     font-size: 1.5rem;
+    line-height: normal;
 }
 
 header h2 {
     margin: 0.2rem;
     font-size: 1.1rem;
-    color: #b7c2ca;
+    line-height: normal;
 }
 
 header div {

@@ -1,10 +1,9 @@
 <!-- TODO:
-	1. Criar Páginas de Direitos Autorais
-	2. Adicionar links nos logos, na historia e nos direitos autorais do footer.
-	3. Criar Paginas do Projeto
-	4. Adicionar links para páginas do nav
-	5. Descobrir por que esta aparecendo barra de rolagem horizontal na responsividade de telas pequenas
-	6. Buscar entender por que na pagina online os links estão em azul, até mesmo no nav.
+	1. Criar paginas do nav
+	2. Adicionar links para páginas do nav
+	3. Fechar nav com transição suave
+	4. Imagem de capa com EDO
+	5. Melhorar a página da história do projeto
  -->
  <!-- OBS: Sempre buscar responsividade em telas que vão de largura de 250px até 2000px -->
 
@@ -29,12 +28,14 @@
 
 	<!-- Títulos inseridos manualmente para evitar linkagem para página atual -->
 	<div class="container-titulos">
-		<div class="titulos">
-			<h1>Cálculo Diferencial</h1>
-			<h2>RECURSOS EDUCACIONAIS DIGITAIS PARA O ENSINO DE MATEMÁTICA</h2>
-		</div>
-		<div class="img-titulo">
-			<img src="assets/img/index/imagem-capa.png" alt="Imagem de Capa">
+		<div>
+			<div class="titulos">
+				<h1>Cálculo Diferencial</h1>
+				<h2>RECURSOS EDUCACIONAIS DIGITAIS PARA O ENSINO DE MATEMÁTICA</h2>
+			</div>
+			<div class="img-titulo">
+				<img src="assets/img/index/imagem-capa.png" alt="Imagem de Capa">
+			</div>
 		</div>
 	</div>
 
@@ -42,19 +43,18 @@
 	<div class="container-principal">
 		<div class="box" id="coluna-esq">
 
-			<p>O material disponibilizado nesta plataforma (ainda em construção) visa introduzir o aluno ao cálculo diferencial de funções de várias variáveis reais bem como fornecer recursos educacionais para o estudo de Equações Diferenciais Ordinárias (EDO). É parte de nossa proposta dotar os professores de recursos digitais interativos, que tornem suas aulas mais atrativas e envolventes para os alunos. </p>
+			<p>Esta plataforma (ainda em construção) visa introduzir o aluno ao cálculo diferencial de funções de várias variáveis reais bem como fornecer recursos educacionais para o estudo de Equações Diferenciais Ordinárias (EDO). É parte de nossa proposta dotar os professores de recursos digitais interativos, que tornem suas aulas mais atrativas e envolventes para os alunos. </p>
 			<p>	Os materiais disponibilizados na plataforma incluem: </p>
 			<ul>
 				<li><strong>Apostilas</strong> com textos básicos da disciplina, figuras, exemplos resolvidos e exercícios com solução;</li>
-				<li><strong>Recursos Computacionais</strong> realizados com o GeoGebra 3D, coletadas na sua maioria do 
-					<a href="https://www.geogebra.org/m/hzvsftdf"><span class="label">Livro Geogebra</span></a></li>
+				<li><strong>Recursos Computacionais</strong> realizados com o GeoGebra 3D, coletadas na sua maioria do <strong><a href="https://www.geogebra.org/m/hzvsftdf">Livro Digital de Cálculo de Várias Variáveis com Geogebra 3D. Vol I.</a></strong></li>
 				<li><strong>Videoaulas</strong> explicativas e atividades de reforço para auxiliar no processo de aprendizagem.</li>
 			</ul>							 
 			<p>Nossa equipe é composta por profissionais dedicados: </p>
 			<ul>
 				<li><strong>Profa. Begoña Alarcón Cotillas</strong></li>
-				<li><strong>Alan Gomes</strong> (Ciência da Computação, atuou em 2022): responsável pelo desenvolvimento e manutenção da plataforma.</li>
-				<li><strong>Maria Luiza Sousa Martins Americo</strong> (Engenharia Elétrica, atuou em 2022): contribui com a criação de textos e recursos computacionais para a apostila.</li>
+				<li><strong>Alan Gomes</strong> (Ciência da Computação, atuou em 2021): responsável pelo desenvolvimento e manutenção da plataforma.</li>
+				<li><strong>Maria Luiza Sousa Martins Americo</strong> (Engenharia Elétrica, atuou em 2021): contribui com a criação de textos e recursos computacionais para a apostila.</li>
 				<li><strong>Sergio Herman Bastos Lima</strong> (Ciência da Computação, atua em 2023): responsável pela repaginação do projeto, criação e adição de conteúdos relacionados a Equações Diferenciais Ordinárias.</li>
 			</ul>	
 			
@@ -112,8 +112,7 @@
 							<ul class="nav-list">
 								<li class="nvf">Domínio, Imagem e Gráfico</li>
 								<li class="nvf">Conjuntos de Nível</li>
-								<!-- TODO: Alterar este R^n -->
-								<li class="nvf">Topologia em *(\mathbb{R}^{n})*</li>
+								<li class="nvf">Topologia em ℝ<sup class="superscript">n</sup></li>
 								<li class="nvf">Limites e Continuidade</li>
 								<li class="nvf">Derivadas Parciais</li>
 								<li class="nvf">Diferenciabilidade</li>

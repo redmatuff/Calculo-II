@@ -1,5 +1,5 @@
 const conteudoTitulos = `
-	<div class="container-titulos">
+	<div>
 		<div class="titulos">
 			<h1><a href="../../index.html">Cálculo Diferencial</a></h1>
 			<h2>RECURSOS EDUCACIONAIS DIGITAIS PARA O ENSINO DE MATEMÁTICA</h2>

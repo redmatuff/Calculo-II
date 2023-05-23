@@ -1,0 +1,25 @@
+.container-principal {
+    margin: 3rem 7.5vw;
+    /* box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    padding: 4rem; */
+}
+
+.container-principal h1 {
+    text-decoration: underline;
+}
+
+.container-principal li {
+    margin: 0 0 0 4rem;
+    list-style-position: outside;
+    font-weight: 600;
+}
+
+.container-principal p{
+    font-weight: 600;
+}
+
+#ult-at{
+    font-weight: 100;
+    text-align: right;
+    margin-top: 5rem;
+}

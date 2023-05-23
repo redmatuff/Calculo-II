@@ -29,6 +29,10 @@ body {
 .container-principal {
     flex-grow: 1;
 }
+.container-principal {
+    margin: 3rem 7.5vw;
+}
+
 
 #cor-fundo {
     position: fixed;
@@ -39,10 +43,21 @@ body {
     background-image: linear-gradient(to top , rgba(185, 99, 0, 0.479), rgba(255, 255, 255, 0.37));
 }
 
+h1 {
+    font-size: 1.7rem;
+    margin: 2rem 0 1.5rem 0;
+    line-height: 2.5rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+    margin: 2rem 0 1.5rem 0;
+}
+
 h3 {
     font-size: 1.3rem;
     font-weight: 600;
-    margin: 2rem 0 1rem 0;
+    margin: 3rem 0 1rem 0;
 }
 
 p{
@@ -57,18 +72,23 @@ a {
     font-style: italic;
 }
 
-ol,
 ul {
     list-style-type: disc;
     list-style-position: inside;
 }
 
-li {
-    padding: 0.5rem 1rem;
+ol {
+    list-style-type: decimal;
+    list-style-position: inside;
 }
 
 strong{
     font-weight: 700;
+}
+
+.superscript {
+    vertical-align: super;
+    font-size: smaller;
 }
 
 @media (max-width: 600px) {

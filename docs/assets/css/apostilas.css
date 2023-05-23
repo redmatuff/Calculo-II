@@ -3,6 +3,10 @@ a{
     font-weight: 600;
 }
 
-.container-principal {
-    margin: 3rem;
+.destaque {
+    font-size: larger;
+}
+
+li {
+    padding: 0.5rem 3rem;
 }

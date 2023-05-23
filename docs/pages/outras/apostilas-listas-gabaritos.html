@@ -1,6 +1,5 @@
-<!-- TODO: Reestruturar todos os títulos h4 para parágrafo p -->
-<!-- Colocar IR^n formatado corretamente -->
-<!-- Criar nova funcao inserefooter para corrigir caminho das imagens, mas só depois de inserir links no inserefooter original -->
+<!-- Testar responsividade -->
+<!-- Remoção de quebras de linhas -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -12,6 +11,7 @@
 	<link rel="stylesheet" href="../../assets/css/reset.css">
 	<link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/header.css">
+    <link rel="stylesheet" href="../../assets/css/titulos.css">
     <link rel="stylesheet" href="../../assets/css/footer.css">
     <link rel="stylesheet" href="../../assets/css/apostilas.css">
 
@@ -20,12 +20,11 @@
 	<div id="cor-fundo"></div>
     <div class="header"></div>
     
-	<div class="container-titulos">
-		<div class="titulos">
-			<h1>Cálculo Diferencial</h1>
-			<h2>APOSTILAS, LISTAS E GABARITOS</h2>
-		</div>
-	</div>
+	<div class="container-titulos"></div>
+
+
+
+
 	<div class="container-principal">
 
 
@@ -38,7 +37,7 @@
         <!-- Apostila completa-->
         <section class="tiles">
             <ul style="list-style: none;">
-                <li><a href="../../assets/pdf/apostila/apostila-completa.pdf"><h4>Acesse aqui a apostila completa!!</h4></a> Última atualização: 06/05/2022</li>
+                <li><a href="../../assets/pdf/apostila/apostila-completa.pdf" class="destaque">Acesse aqui a apostila completa!!</a> Última atualização: 06/05/2022</li>
             </ul>
         </section>
         
@@ -49,44 +48,42 @@
         </section>
         <section class="tiles">
             
+                
+        
+            <h3>Funções vetoriais de uma variável</h3>
             <ul style="list-style: none;">
-                
-                <li>
-                    <h3>Funções vetoriais de uma variável</h3>
-                    <ul style="list-style: none;">
-                        <li><a href="../../assets/pdf/apostila/vectorial-uma-dominio.pdf"><h4>Domínio, imagem e parametrização de curvas</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/vetorial-uma-derivada.pdf"><h4>Limites, derivada e vetor tangente</h4></a></li>
-                    </ul>
-                
-                <li>
-                    <h3>Funções escalares de várias variáveis</h3>
-                    <ul style="list-style: none;">
-                        <li><a href="../../assets/pdf/apostila/dominio-imagem.pdf"><h4>Domínio, imagem e gráfico</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/curvas-de-nivel.pdf"><h4>Curvas de nível</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/superficies-nivel.pdf"><h4>Superfícies de nível</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/topologia.pdf"><h4>Topologia em *(\mathbb{R}^{n})*</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/limites-conceito.pdf"><h4>Conceito e propriedades de limites</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/limites-continuidade.pdf"><h4>Cálculo de limites. Continuidade</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/derivadas-parciais.pdf"><h4>Derivadas parciais</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/diferenciabilidade.pdf"><h4>Diferenciabilidade</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/aproximacao-de-funcoes.pdf"><h4>Aproximação linear de funções</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/regra-cadeia.pdf"><h4>Regra da cadeia e derivação implícita</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/derivadas-direcionais.pdf"><h4>Derivadas direcionais. Propriedades do vetor gradiente</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/derivadas-ordem-superior.pdf"><h4>Derivadas parciais de ordem superior</h4></a></li>										
-                        <li><a href="../../assets/pdf/apostila/extremantes.pdf"><h4>Extremos locais. Classificação de pontos críticos</h4></a></li>
-                        <li><a href="../../assets/pdf/apostila/multiplicadores-lagrange.pdf"><h4>Máximos e mínimos absolutos em compactos. Multiplicadores de Lagrange.</h4></a></li>
-                        <!-- <li><a href="../../assets/pdf/apostila/exercicios-resolvidos.pdf"><h4>Exercícios Resolvidos (alguns)</h4></a></li> -->
-                
-                    </ul>
-                </li>
-                <li>
-                    <h3>Funções vetoriais de várias variáveis</h3>
-                    <ul style="list-style: none;">
-                        <li><a href="../../assets/pdf/apostila/vetorial-varias-transformacoes.pdf"><h4>Transformações. Mudança de variável.</h4></a></li>
-                        
-                    </ul>
-                </li>
+                <li><a href="../../assets/pdf/apostila/vectorial-uma-dominio.pdf">Domínio, imagem e parametrização de curvas</a></li>
+                <li><a href="../../assets/pdf/apostila/vetorial-uma-derivada.pdf">Limites, derivada e vetor tangente</a></li>
             </ul>
+        
+        
+            <h3>Funções escalares de várias variáveis</h3>
+            <ul style="list-style: none;">
+                <li><a href="../../assets/pdf/apostila/dominio-imagem.pdf">Domínio, imagem e gráfico</a></li>
+                <li><a href="../../assets/pdf/apostila/curvas-de-nivel.pdf">Curvas de nível</a></li>
+                <li><a href="../../assets/pdf/apostila/superficies-nivel.pdf">Superfícies de nível</a></li>
+                <li><a href="../../assets/pdf/apostila/topologia.pdf">Topologia em  ℝ<sup class="superscript">n</sup></a></li>
+                <li><a href="../../assets/pdf/apostila/limites-conceito.pdf">Conceito e propriedades de limites</a></li>
+                <li><a href="../../assets/pdf/apostila/limites-continuidade.pdf">Cálculo de limites. Continuidade</a></li>
+                <li><a href="../../assets/pdf/apostila/derivadas-parciais.pdf">Derivadas parciais</a></li>
+                <li><a href="../../assets/pdf/apostila/diferenciabilidade.pdf">Diferenciabilidade</a></li>
+                <li><a href="../../assets/pdf/apostila/aproximacao-de-funcoes.pdf">Aproximação linear de funções</a></li>
+                <li><a href="../../assets/pdf/apostila/regra-cadeia.pdf">Regra da cadeia e derivação implícita</a></li>
+                <li><a href="../../assets/pdf/apostila/derivadas-direcionais.pdf">Derivadas direcionais. Propriedades do vetor gradiente</a></li>
+                <li><a href="../../assets/pdf/apostila/derivadas-ordem-superior.pdf">Derivadas parciais de ordem superior</a></li>										
+                <li><a href="../../assets/pdf/apostila/extremantes.pdf">Extremos locais. Classificação de pontos críticos</a></li>
+                <li><a href="../../assets/pdf/apostila/multiplicadores-lagrange.pdf">Máximos e mínimos absolutos em compactos. Multiplicadores de Lagrange.</a></li>
+                <!-- <li><a href="../../assets/pdf/apostila/exercicios-resolvidos.pdf">Exercícios Resolvidos (alguns)</a></li> -->
+        
+            </ul>
+        
+        
+            <h3>Funções vetoriais de várias variáveis</h3>
+            <ul style="list-style: none;">
+                <li><a href="../../assets/pdf/apostila/vetorial-varias-transformacoes.pdf">Transformações. Mudança de variável.</a></li>
+                
+                    </ul>
+                
         </section>
 
 
@@ -97,5 +94,6 @@
     <div class="footer-nv2"></div>
 </body>
 <script src="../../assets/js/insere-header.js"></script>
+<script src="../../assets/js/insere-titulos.js"></script>
 <script src="../../assets/js/insere-footer.js"></script>
 </html>
