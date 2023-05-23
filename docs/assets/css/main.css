@@ -23,6 +23,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+
+    background-attachment: fixed;
+    background-image: linear-gradient(to top, rgba(185, 99, 0, 0.479), rgba(255, 255, 255, 0.37), white, white);
 }
 
 .container-principal {
@@ -30,17 +33,6 @@ body {
 }
 .container-principal {
     margin: 3rem 7.5vw;
-}
-
-
-#cor-fundo {
-    position: fixed;
-    background-attachment: fixed;
-    top:0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-    background-image: linear-gradient(to top , rgba(185, 99, 0, 0.479), rgba(255, 255, 255, 0.37),white, white);
 }
 
 h1 {
