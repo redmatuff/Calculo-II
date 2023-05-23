@@ -7,10 +7,18 @@
 }
 
 .container-principal li {
-    margin: 0 0 0 4rem;
-    list-style-position: outside;
+    margin: 0 0 0 3rem;
+    list-style-position: inside;
 }
 
+.container-principal li {
+    list-style-type: disc;
+}
 .container-principal p {
+    text-indent: 3rem;
+}
+
+.container-principal .site {
+    word-wrap: break-word;
 }
 

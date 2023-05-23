@@ -14,7 +14,6 @@
 }
 
 body {
-    background-color: white;
     color: #6e7880;
     font-family: 'Roboto';
     letter-spacing: 0.1rem;
@@ -35,8 +34,8 @@ body {
 
 
 #cor-fundo {
-    background-attachment: fixed;
     position: fixed;
+    background-attachment: fixed;
     top:0;
     width: 100%;
     height: 100vh;
@@ -56,9 +55,14 @@ h2 {
 }
 
 h3 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
     font-weight: 600;
     margin: 3rem 0 1rem 0;
+}
+h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem 0;
 }
 
 p{
@@ -102,5 +106,10 @@ strong{
     p{
         text-align: left;
     }
+}
+
+.revisar * {
+    background-color: rgb(255, 109, 109);
+    color: black;
 }
 

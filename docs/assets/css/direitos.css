@@ -18,6 +18,10 @@
     font-weight: 600;
 }
 
+.container-principal p {
+    text-indent: 3rem;
+}
+
 #ult-at{
     font-weight: 100;
     text-align: right;
