@@ -36,11 +36,11 @@ body {
 
 #cor-fundo {
     position: fixed;
-    top:60vh;
+    top:0;
     width: 100%;
-    height: 40vh;
+    height: 100vh;
     z-index: -1;
-    background-image: linear-gradient(to top , rgba(185, 99, 0, 0.479), rgba(255, 255, 255, 0.37));
+    background-image: linear-gradient(to top , rgba(185, 99, 0, 0.479), rgba(255, 255, 255, 0.37),white, white);
 }
 
 h1 {
