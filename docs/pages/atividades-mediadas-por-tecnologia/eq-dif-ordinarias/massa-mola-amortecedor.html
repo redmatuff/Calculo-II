@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cálculo 2 IME-UFF</title>
+	<link rel="stylesheet" href="../../../assets/css/reset.css">
+	<link rel="stylesheet" href="../../../assets/css/main.css">
+	<link rel="stylesheet" href="../../../assets/css/header.css">
+	<link rel="stylesheet" href="../../../assets/css/titulos.css">
+	<link rel="stylesheet" href="../../../assets/css/footer.css">
+	<link rel="stylesheet" href="../../../assets/css/massa-mola-amort.css">
+	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+	<div class="header"></div>
+	<div class="container-titulos-nv3"></div>
+	<div class="container-principal">
+		
+        <hr>
+		<div class = "revisar">
+			<p>MUITO TEXTO! PRECISO RESUMIR, COLOCAR SÓ A IMAGEM, O SOMATÓRIO DAS FORÇAS, A SUBSTITUIÇÃO DE VELOCIDADE E ACELERAÇÃO POR dt/dt E d²x/dt² APRESENTAR A SOLUÇÃO E MOSTRAR O APPLET DEPOIS DE COLOCAR UMA "ROUPAGEM" NELE.</p>
+			<p>TALVEZ SEJA INTERESSANTE MOSTRAR QUE UMA SOLUÇÃO SUPERAMORTECIDA NÃO É OSCILATÓRIA, E QUE O APPLET TRATA APENAS DE CASOS SUBAMORTECIDOS. ESTA QUESTÃO PRECISA SER ESTUDADA.</p>
+			<p>DEIXAREI A PÁGINA COM O CONTEÚDO COMPLETO DISPONÍVEL PARA O ALUNO QUE QUISER MAIS DETALHES SOBRE O CONTEÚDO, MAS APENAS O RESUMO TERÁ ACESSO A PARTIR DA PÁGINA INICIAL.</p>
+		</div>
+		<h1>Modelagem de um Sistema Massa-Mola-Amortecedor</h1>
+
+		<section>
+		<h2>Compreendendo o Problema</h2>
+		<img src="../../../assets/img/atv-med-tec/edo/massa-mola-amort-forcas.gif" alt="Animação de um sistema Massa-Mola-Amortecedor">
+		<p>O estudo do sistema massa-mola-amortecedor é fundamental para compreender o comportamento vibratório de sistemas mecânicos. Nesse sistema, uma massa está conectada a uma mola e um amortecedor, resultando em um movimento oscilatório. Através de uma animação que simula esse movimento, é possível visualizar as características essenciais, como amplitude, frequência e amortecimento.</p>
+		<p>Neste trabalho, nosso objetivo é explorar as propriedades desse sistema e investigar a influência dos parâmetros e condições iniciais no movimento oscilatório. Além disso, iremos destacar as aplicações práticas desse conhecimento. A combinação da análise teórica com a animação visual nos permitirá fornecer uma compreensão mais intuitiva e aprofundada desse sistema.</p>
+		</section>
+		<!-- <div class="clear"></div> -->
+
+
+		<h2>Motivação</h2>
+		<p>Modelar um sistema massa-mola-amortecedor é uma habilidade crucial em várias áreas. Na engenharia mecânica, tais modelos ajudam a reduzir vibrações indesejadas em máquinas e motores, aumentando a eficiência. Na engenharia civil, são empregados para criar edifícios e estruturas resistentes a ventos fortes e terremotos, otimizando a segurança e a durabilidade.</p>
+		<p>Na engenharia aeroespacial, esses modelos podem ser aplicados no design de sistemas de suspensão de aeronaves, suavizando o impacto das turbulências e melhorando o conforto dos passageiros. No desenvolvimento de eletrônicos, sistemas massa-mola-amortecedores protegem componentes sensíveis de choques e vibrações, prolongando a vida útil do dispositivo.</p>
+		<p>Dominar esses modelos também desenvolve habilidades analíticas e de pensamento crítico. Esse conhecimento se torna uma ferramenta poderosa para resolver problemas complexos, sendo aplicável em diversas áreas além da física e engenharia.</p>
+
+		<h2>Modelagem</h2>
+		<p>A modelagem de um sistema massa-mola-amortecedor usa a Lei de Newton, a Lei de Hooke, e um princípio adicional de que a força do amortecedor é inversamente proporcional à velocidade de deslocamento da massa (este princípio pode sofrer variações de acordo com a modelagem do amortecedor). Com essas forças atuando em conjunto, é possível estabelecer a equação diferencial que descreve o movimento do sistema.</p>
+		<p>A Segunda Lei de Newton afirma que a força resultante que atua sobre um corpo é igual à sua massa vezes sua aceleração. É dada pela equação:</p>
+    	<p>\(
+    	F_{\text{R}} = m \cdot a
+    	\)</p>
+    	<p>Por outro lado, a Lei de Hooke descreve a força restitutiva exercida por uma mola. Ela afirma que a força é proporcional ao deslocamento da mola a partir de sua posição de equilíbrio. A constante de proporcionalidade é a constante da mola, denotada por k. A Lei de Hooke é dada pela equação:</p>
+    	<p>\(
+    	F_{\text{el}} = -k \cdot x
+    	\)</p>
+    	<p>Aqui, x é o deslocamento da mola a partir de sua posição de equilíbrio. O sinal negativo indica que a força é exercida na direção oposta ao deslocamento.</p>
+		<p>É crucial compreender a força exercida pelo amortecedor no sistema. A característica principal de um amortecedor é sua tendência para diminuir a velocidade do sistema, gerando uma força que atua em direção contrária à velocidade. Portanto, quanto maior a velocidade, maior a força do amortecedor.</p>
+		<p>Em muitos casos, considera-se que a relação entre a força do amortecedor e a velocidade é linear. Com base nessa suposição, podemos introduzir uma constante de amortecimento, denotada por 'b'. Isso nos permite formular a força de amortecimento da seguinte maneira:</p>
+		<p>\(
+		F_{\text{amort}} = -b \cdot v
+		\)</p>
+		<p>Nesta fórmula, 'v' representa a velocidade do sistema. O sinal negativo enfatiza que a força do amortecedor atua contra a direção da velocidade.</p>
+
+		<p>Uma vez que as forças atuantes em um sistema massa-mola-amortecedor foram identificadas, podemos agora estabelecer a equação diferencial que descreve o comportamento do sistema. A Segunda Lei de Newton estabelece que a soma das forças atuantes em um corpo é igual à massa do corpo multiplicada por sua aceleração. No caso de um sistema massa-mola-amortecedor, as três forças principais são a força da mola, a força do amortecedor e a força externa, se houver.</p>
+
+		<p>De acordo com a Segunda Lei de Newton, podemos então escrever a seguinte equação para o sistema:</p>
+		<p>\(
+		F_{\text{externa}} = m \cdot a + b \cdot v + k \cdot x
+		\)</p>
+		<p>Isso é equivalente a:</p>
+		<p>\(
+		F_{\text{externa}} = m \cdot \frac{d^2x}{dt^2} + b \cdot \frac{dx}{dt} + k \cdot x
+		\)</p>
+		<p>Esta é a equação diferencial que governa o movimento de um sistema massa-mola-amortecedor. As soluções desta equação descreverão a posição da massa ao longo do tempo sob a ação das forças da mola, do amortecedor e de quaisquer forças externas. No nosso exemplo, a força externa é zero.</p>
+
+
+		<h2>Solução</h2>
+		<p>Um sistema massa-mola-amortecedor é um modelo físico que descreve o comportamento vibratório de um objeto ligado a uma mola onde ocorre dissipação de energia. Ao aplicar conceitos da teoria de equações diferenciais ordinárias, podemos resolver a equação diferencial que governa o sistema e determinar a posição da massa em relação ao tempo, possibilitando compreender e prever o movimento oscilatório do sistema.</p>
+		
+		<div class="revisar">
+			<p>CONTINUAR A PARTIR DAQUI DEPOIS</p>
+		
+		<p>
+			Solução de um sistema sub-amortecido
+		</p>
+		<p>
+			\( f(t) = A \cdot e^{-\frac{b}{2m}t} \cos(wt - \varphi) \)
+		</p>
+		</div>
+
+
+
+		<h2>Exercício:</h2>
+
+        <!-- COLOCAR O CONTEÚDO AQUI -->
+
+	</div>
+	<div class="footer-nv3"></div> 
+</body>
+<!-- COLOCAR SCRIPT AQUI -->
+<script src="../../../assets/js/insere-header.js"></script>
+<script src="../../../assets/js/insere-titulos.js"></script>
+<script src="../../../assets/js/insere-footer.js"></script>
+</html>
