@@ -33,9 +33,9 @@ const conteudoFooter = `
 const conteudoFooterNv2 = `
         <footer>
             <div id="ft-col1">
-                <p><a href="historia-do-projeto.html">História do Projeto</a></p>
+                <p><a href="../outras/historia-do-projeto.html">História do Projeto</a></p>
                 <p id="email"><a href="mailto:redmatuff@gmail.com">redmatuff@gmail.com</a></p>
-                <p><a href="direitos-autorais.html">Direitos Autorais</a></p>
+                <p><a href="../outras/direitos-autorais.html">Direitos Autorais</a></p>
             </div>
             <div id="ft-col2">
                 <p>Descubra a matemática em uma nova dimensão explorando recursos interativos e ferramentas digitais para aprimorar seu aprendizado. Deixe a tecnologia elevar sua compreensão e ampliar sua visão navegando por um mundo de possibilidades para conquistar o domínio dessa ciência fascinante.</p>
@@ -62,9 +62,9 @@ const conteudoFooterNv2 = `
 const conteudoFooterNv3 = `
         <footer>
             <div id="ft-col1">
-                <p><a href="historia-do-projeto.html">História do Projeto</a></p>
+                <p><a href="../../outras/historia-do-projeto.html">História do Projeto</a></p>
                 <p id="email"><a href="mailto:redmatuff@gmail.com">redmatuff@gmail.com</a></p>
-                <p><a href="direitos-autorais.html">Direitos Autorais</a></p>
+                <p><a href="../../outras/direitos-autorais.html">Direitos Autorais</a></p>
             </div>
             <div id="ft-col2">
                 <p>Descubra a matemática em uma nova dimensão explorando recursos interativos e ferramentas digitais para aprimorar seu aprendizado. Deixe a tecnologia elevar sua compreensão e ampliar sua visão navegando por um mundo de possibilidades para conquistar o domínio dessa ciência fascinante.</p>
