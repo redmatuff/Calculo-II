@@ -12,7 +12,7 @@
 </ul> 
 <p>Nossa equipe é composta por profissionais dedicados: </p>
 <ul>
-<li><strong>Profa. Begoña Alarcón Cotillas</strong></li>
+<li><strong>Profª. Begoña Alarcón Cotillas</strong></li>
 <li><strong>Alan Gomes</strong> (Ciência da Computação, atuou em 2022): responsável pelo desenvolvimento e manutenção da plataforma.</li>
 <li><strong>Maria Luiza Sousa Martins Americo</strong> (Engenharia Elétrica, atuou em 2022): contribui com a criação de textos e recursos computacionais para a apostila.</li>
 <li><strong>Sergio Herman Bastos Lima</strong> (Ciência da Computação, atua 2023): responsável pela repaginação do projeto, criação e adição de conteúdos relacionados a Equações Diferenciais Ordinárias.</li>
