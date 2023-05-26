@@ -44,37 +44,88 @@
 		<h2>Modelagem</h2>
 		<p>A modelagem de um sistema massa-mola-amortecedor usa a Lei de Newton, a Lei de Hooke, e um princípio adicional de que a força do amortecedor é inversamente proporcional à velocidade de deslocamento da massa (este princípio pode sofrer variações de acordo com a modelagem do amortecedor). Com essas forças atuando em conjunto, é possível estabelecer a equação diferencial que descreve o movimento do sistema.</p>
 		<p>A Segunda Lei de Newton afirma que a força resultante que atua sobre um corpo é igual à sua massa vezes sua aceleração. É dada pela equação:</p>
-    	<p>\(
+    	<p>\[
     	F_{\text{R}} = m \cdot a
-    	\)</p>
-    	<p>Por outro lado, a Lei de Hooke descreve a força restitutiva exercida por uma mola. Ela afirma que a força é proporcional ao deslocamento da mola a partir de sua posição de equilíbrio. A constante de proporcionalidade é a constante da mola, denotada por k. A Lei de Hooke é dada pela equação:</p>
-    	<p>\(
+    	\]</p>
+    	<p>Por outro lado, a Lei de Hooke descreve a força restitutiva exercida por uma mola. Ela afirma que a força é proporcional ao deslocamento da mola a partir de sua posição de equilíbrio. A constante de proporcionalidade é a constante da mola, denotada por \(k\). A Lei de Hooke é dada pela equação:</p>
+    	<p>\[
     	F_{\text{el}} = -k \cdot x
-    	\)</p>
-    	<p>Aqui, x é o deslocamento da mola a partir de sua posição de equilíbrio. O sinal negativo indica que a força é exercida na direção oposta ao deslocamento.</p>
+    	\]</p>
+    	<p>Aqui, \(x\) é o deslocamento da mola a partir de sua posição de equilíbrio. O sinal negativo indica que a força é exercida na direção oposta ao deslocamento.</p>
 		<p>É crucial compreender a força exercida pelo amortecedor no sistema. A característica principal de um amortecedor é sua tendência para diminuir a velocidade do sistema, gerando uma força que atua em direção contrária à velocidade. Portanto, quanto maior a velocidade, maior a força do amortecedor.</p>
-		<p>Em muitos casos, considera-se que a relação entre a força do amortecedor e a velocidade é linear. Com base nessa suposição, podemos introduzir uma constante de amortecimento, denotada por 'b'. Isso nos permite formular a força de amortecimento da seguinte maneira:</p>
-		<p>\(
+		<p>Em muitos casos, considera-se que a relação entre a força do amortecedor e a velocidade é linear. Com base nessa suposição, podemos introduzir uma constante de amortecimento, denotada por \(b\). Isso nos permite formular a força de amortecimento da seguinte maneira:</p>
+		<p>\[
 		F_{\text{amort}} = -b \cdot v
-		\)</p>
-		<p>Nesta fórmula, 'v' representa a velocidade do sistema. O sinal negativo enfatiza que a força do amortecedor atua contra a direção da velocidade.</p>
+		\]</p>
+		<p>Nesta fórmula, \(v\) representa a velocidade do sistema. O sinal negativo enfatiza que a força do amortecedor atua contra a direção da velocidade.</p>
 
 		<p>Uma vez que as forças atuantes em um sistema massa-mola-amortecedor foram identificadas, podemos agora estabelecer a equação diferencial que descreve o comportamento do sistema. A Segunda Lei de Newton estabelece que a soma das forças atuantes em um corpo é igual à massa do corpo multiplicada por sua aceleração. No caso de um sistema massa-mola-amortecedor, as três forças principais são a força da mola, a força do amortecedor e a força externa, se houver.</p>
 
 		<p>De acordo com a Segunda Lei de Newton, podemos então escrever a seguinte equação para o sistema:</p>
-		<p>\(
+		<p>\[
 		F_{\text{externa}} = m \cdot a + b \cdot v + k \cdot x
-		\)</p>
-		<p>Isso é equivalente a:</p>
-		<p>\(
-		F_{\text{externa}} = m \cdot \frac{d^2x}{dt^2} + b \cdot \frac{dx}{dt} + k \cdot x
-		\)</p>
-		<p>Esta é a equação diferencial que governa o movimento de um sistema massa-mola-amortecedor. As soluções desta equação descreverão a posição da massa ao longo do tempo sob a ação das forças da mola, do amortecedor e de quaisquer forças externas. No nosso exemplo, a força externa é zero.</p>
+		\]</p>
+		<p>Como no nosso exemplo a força externa é zero, isso é equivalente a:</p>
+		<p>\[
+		m \cdot \frac{d^2x}{dt^2} + b \cdot \frac{dx}{dt} + k \cdot x = 0
+		\]</p>
+		<p>Esta é a equação diferencial que governa o movimento de um sistema massa-mola-amortecedor. As soluções desta equação descreverão a posição da massa ao longo do tempo sob a ação das forças da mola, do amortecedor e de quaisquer forças externas.</p>
 
 
 		<h2>Solução</h2>
 		<p>Um sistema massa-mola-amortecedor é um modelo físico que descreve o comportamento vibratório de um objeto ligado a uma mola onde ocorre dissipação de energia. Ao aplicar conceitos da teoria de equações diferenciais ordinárias, podemos resolver a equação diferencial que governa o sistema e determinar a posição da massa em relação ao tempo, possibilitando compreender e prever o movimento oscilatório do sistema.</p>
+
+		<p>Para simplificar, vamos dividir todos os termos por \(m\), então a equação se torna:</p>
+
+		<p>\[
+		\frac{d^2x}{dt^2} + \frac{b}{m} \cdot \frac{dx}{dt} + \frac{k}{m} \cdot x = 0
+		\]</p>
+
+		<p>Agora, vamos substituir \(\frac{b}{m}\) por \(γ\) (fator de amortecimento) e \(\frac{k}{m}\) por \(ω²\) (quadrado da frequência natural), obtendo:</p>
+
+		<p>\[
+		\frac{d^2x}{dt^2} + γ \cdot \frac{dx}{dt} + ω² \cdot x = 0
+		\]</p>
+
+		<p>A equação característica associada a essa equação diferencial é uma equação quadrática dada por:</p>
+
+		\[
+		r² + γr + ω² = 0
+		\]
+
+		<p style="text-indent: 0;">onde \( r \) são as raízes da equação. Essas raízes podem ser reais ou complexas, dependendo do valor de \( γ² - 4ω² \), (que é o discriminante da equação característica) e elas determinam a natureza da solução da equação diferencial. Assumindo que \(γ² - 4ω² < 0\) (fisicamente isto representa um o sistema é subamortecido), a solução geral é da forma:</p>
+
+		\[
+		x(t) = e^{-γt/2} \cdot [C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
+		\]
+
+		<p style="text-indent: 0;">onde \(ω_d = \sqrt{ω² - (γ/2)²}\) é a frequência amortecida e \(C_1\) e \(C_2\) são constantes que podem ser determinadas a partir de condições iniciais.</p>
+
+		<p>Aqui vale uma observação. E se \(γ² - 4ω² > 0\) ? Fisicamente teríamos um sistema superamortecido (cuja solução não é o escopo desta página). A nível de curiosidade, em um sistema superamortecido não há oscilação. Em vez disso, o sistema volta gradualmente ao seu estado de equilíbrio sem nunca ultrapassá-lo. Isso ocorre devido ao fato de que todas as soluções da equação diferencial decrescem exponencialmente com o tempo. Neste caso, força elástica é pequena em relação a força de amortecimento de modo que a solução deixa de ser oscilatória.
+		</p>
+
+
+
+
+		<h2>Reescrevendo a Solução</h2>
 		
+		<p>Existe uma maneira alternativa de expressar a solução da equação diferencial homogênea que permite eliminar a soma das funções trigonométricas seno e cosseno. Isso é feito pela introdução de um termo de fase em uma única função cosseno. A solução pode ser expressa de forma equivalente como:</p>
+
+		\[ x(t) = A \cdot e^{-\frac{\gamma t}{2}} \cdot \cos(\omega_d \cdot t + \phi) \]
+
+		<p style="text-indent: 0;">onde \(A\) é a amplitude resultante e \(\phi\) é a fase.</p>
+
+		<p>Nesta nova expressão, \(A\) e \(\phi\) são escolhidos de tal forma que as duas expressões são equivalentes para todos os valores de \(t\). Esta transformação é possível devido às identidades trigonométricas, especificamente a identidade para a soma dos ângulos, que afirma que \(\cos(a+b) = \cos(a)\cos(b) - \sin(a)\sin(b)\).</p>
+
+		<p>Agora as novas constantes a serem determinadas pelas condições de contorno são \(A\) e \(\phi\). Essa forma alternativa tem o benefício de simplificar a expressão ao eliminar a necessidade de lidar com uma soma de funções trigonométricas, substituindo-a por uma única função cosseno com uma amplitude e fase ajustadas. Essa representação é frequentemente mais conveniente, especialmente em aplicações como a análise de sistemas oscilatórios e a solução de equações diferenciais em física e engenharia.</p>
+
+		<p>O applet abaixo foi construido para visualizar melhor esta equivalência.</p>
+		
+		<div class="applet-geogebra-desk" style="padding-bottom: 64%; margin: 0 -3rem;">
+			<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
+
+		</div>
+
 		<div class="revisar">
 			<p>CONTINUAR A PARTIR DAQUI DEPOIS</p>
 		
