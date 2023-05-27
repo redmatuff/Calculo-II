@@ -120,13 +120,118 @@
 		<p>Agora as novas constantes a serem determinadas pelas condições de contorno são \(A\) e \(\phi\). Essa forma alternativa tem o benefício de simplificar a expressão ao eliminar a necessidade de lidar com uma soma de funções trigonométricas, substituindo-a por uma única função cosseno com uma amplitude e fase ajustadas. Essa representação é frequentemente mais conveniente, especialmente em aplicações como a análise de sistemas oscilatórios e a solução de equações diferenciais em física e engenharia.</p>
 
 		<p>O applet abaixo foi construido para visualizar melhor esta equivalência.</p>
+		<div class="revisar"><h2>REESCREVER DAQUI EM DIANTE E MELHORAR RESPONSIVIDADE DO APPLET</h2></div>
+
 		
 		<div class="applet-geogebra-desk" style="padding-bottom: 64%; margin: 0 -3rem;">
 			<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
-
+		</div>
+		<div class="applet-geogebra-cel" style="padding-bottom: 64%; margin: 0 -3rem;">
+			<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
 		</div>
 
-		<div class="revisar">
+
+		<h2>Demonstração Matemática da Equivalência das Soluções</h2>
+
+		<p>Para transformar</p>
+		<span style="color: rgb(130, 0, 30);">
+		\[
+		x(t) = e^{-γt/2} \cdot [C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
+		\]
+		</span>
+		<p style="text-indent: 0;">em</p>
+		<span style="color: rgb(0, 0, 180);">
+		\[
+		x(t) = A \cdot e^{-\frac{\gamma t}{2}} \cdot \cos(\omega_d \cdot t + \phi)
+		\]
+		</span>
+		<p style="text-indent: 0;">vamos começar isolando termos que são idênticos nas duas equações:</p>
+
+		<span style="color: rgb(130, 0, 30);">
+		\[
+		\frac{x(t)} {e^{-γt/2}}  =  C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)
+		\]
+		</span>
+	
+		<span style="color: rgb(0, 0, 180);">
+		\[
+		\frac{x(t)} {e^{-γt/2}}  = A \cdot \cos(\omega_d \cdot t + \phi)
+		\]
+		</span>
+
+		<p>Vamos manter o foco na segunda equação. Como cosseno é uma função cíclica, sabemos que:
+			
+		\[\cos(a + b) = \cos(a + b - 2\pi) = \cos(a - (2\pi -b))\]
+		
+		<p>Portanto:</p>
+
+		<span style="color: rgb(0, 0, 180);">
+		\[
+		\frac{x(t)} {e^{-γt/2}}  = A \cdot \cos(\omega_d \cdot t - (2\pi - \phi))
+		\]
+		</span>
+
+		<p>Agora vamos aplicar a identidade trigonométrica no termo da direita equação:</p>
+
+		<span style="color: rgb(0, 0, 180);">
+		\[
+		\frac{x(t)} {e^{-γt/2}}  = A \cdot [\cos(\omega_d \cdot t)\cos(2 \pi - \phi) + \sin(\omega_d \cdot t)\sin(2 \pi - \phi) ]
+		\]
+		</span>
+
+		<p>Aplicando a distributiva e rearranjando, temos:</p>
+
+		<div style="text-align: center;">
+			<span style="color: rgb(0, 0, 180);">
+
+		\[\]\(
+		\frac{x(t)} {e^{-γt/2}}  = \)<span style="color: rgb(0, 135, 90);">\([A \cos(2 \pi - \phi)]\)</span>\(\cdot\cos(\omega_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\([A \sin(2 \pi - \phi)]\)</span>\( \cdot\sin(\omega_d \cdot t)
+		\)\[\]
+			</span>
+			<span style="color: rgb(130, 0, 30);">
+
+		\(
+		\frac{x(t)} {e^{-γt/2}}  =  \)<span style="color: rgb(0, 135, 90);"> \(C_1\)</span>\( \cdot cos(ω_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\(C_2\)</span>\( \cdot sin(ω_d \cdot t)
+		\)
+
+		\[\]
+			</span>
+		</div>
+
+
+		<p>Uma vez que \(\sin(2 \pi - \phi)\) e \(\cos(2 \pi - \phi)\) são constantes, podems comparar as duas expressões, e para que elas sejam iguais, precisamos descobrir os valores de \(A\) e \(\phi\) tal que:</p>
+
+		<span style="color: rgb(0, 135, 90);">
+		\[
+		C_1 = A \cos(2 \pi - \phi)
+		\]
+		\[
+		C_2 = A \sin(2 \pi - \phi)
+		\]
+		</span>
+
+		<p>Temos um sistema não linear de duas equações que pode ser facilmente resolvido dividindo a segunda equação pela primeira, assim poderemos escrever \(\phi\) em função de \(C_1\) e \(C_2\)</p>
+
+		\[
+		\frac{C_2}{C_1} = \tan(2 \pi - \phi)
+		\]
+		\[
+		\phi = 2\pi - \arctan(\frac{C_2}{C_1})
+		\]
+
+		<p>Escolhendo a primeira das equações anteriores para substituir o valor de \(\phi\) temos:</p>
+
+		\[
+		A = \frac{C_1}{\cos(2\pi - (2\pi - \arctan(\frac{C_2}{C_1})))}
+		\]
+		\[
+		A = \frac{C_1}{\cos(\arctan(\frac{C_2}{C_1}))}
+		\]
+
+		<p>Uma vez que as constantes são definidas pelas condições de contorno, matematicamente não importa a maneira como vamos escrever nossa solução, mas a solução onde aparece apenas um termo trigonométrico apresenta um significado fisico mais palpável para as constantes.</p>
+
+
+		<!-- <div class="revisar">
 			<p>CONTINUAR A PARTIR DAQUI DEPOIS</p>
 		
 		<p>
@@ -135,7 +240,12 @@
 		<p>
 			\( f(t) = A \cdot e^{-\frac{b}{2m}t} \cos(wt - \varphi) \)
 		</p>
-		</div>
+		</div> -->
+
+		<h2>Applet para Sistema Sub-Amortecido</h2>
+
+		<p>Com o applet abaixo é possível verificar como cada variável (com sentido físico) influencia na função que descreve a posição do centro de massa do objeto ao longo do tempo.</p>
+		<p>A solução da EDO nos permite descrever com eficiência diversos problemas físicos.</p>
 
 		<div class="applet-geogebra-desk" style="padding-bottom: 52%; margin: 0 -3rem;">
 			<iframe scrolling="no" title="Massa-Mola-Amortecedor-Desktop-Versao4" src="https://www.geogebra.org/material/iframe/id/jbej9k4k/width/1466/height/706/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1466px" height="706px" style="border:0px;"> </iframe>
@@ -152,6 +262,8 @@
 		</div>
 
 		<h2>Exercício:</h2>
+
+		<p>Muitas vezes observamos o comportamento de um determinado sistema e desejamos descrevê-lo matematicamente.</p>
 
         <!-- COLOCAR O CONTEÚDO AQUI -->
 
