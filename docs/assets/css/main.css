@@ -23,20 +23,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-
     /* BUG EM DISPOSITIVOS MÓVEIS AO ARRASTAR RAPIDAMENTE PARA CIMA O BACKGROUND LEVEMENTE SE MOVE JUNTO */
     background-attachment: fixed;
     background-image: linear-gradient(to top, rgba(185, 99, 0, 0.479), rgba(255, 255, 255, 0.37), white, white);
-
-}
-
-.container-principal {
-    flex-grow: 1;
-    margin: 3rem 7.5vw;
-}
-
-.container-principal p {
-    text-indent: 3rem;
 }
 
 h1 {
@@ -84,27 +73,94 @@ strong{
     font-weight: 700;
 }
 
-.superscript {
+
+.container-principal {
+    flex-grow: 1;
+    margin: 2rem 7.5vw;
+    padding: 1rem; /* se não colocar um padding, o MathJax buga a responsividade de formulas em linha. */
+}
+
+.container-principal p {
+    text-indent: 3rem;
+}
+
+.container-principal .img-direita{
+    float: right;
+    margin: 1rem 0rem 1rem 3rem;
+    max-width: calc(50vw - 3rem);
+}
+.container-principal .img-esquerda {
+    float: left;
+    margin: 1rem 3rem 1rem 0rem;
+    max-width: calc(50vw - 3rem);
+}
+
+.container-principal img {
+    border: solid 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.superscript { /* usado para IR^n */
     vertical-align: super;
     font-size: smaller;
 }
 
-.container-principal img{
-    border: solid 2px rgba(0, 0, 0, 0.3);
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-    float: right;
-    margin: 1rem 0rem 1rem 3rem;
+.revisar * {
+    background-color: rgb(255, 109, 109);
+    color: black;
 }
-.clear {
-    clear: both;
+
+.container-principal span > * {
+    max-width: calc(100vw - 6rem);
 }
+
+/* .mat-em-linha > * {
+    background-color: red;
+    
+} */
+/* .mat-em-bloco,
+.mat-em-bloco-mult {
+    background-color: red;
+    width: 1px;
+    
+}
+
+.mat-em-bloco *,
+.mat-em-bloco-mult * {
+    background-color: red;
+    width: 1px;
+
+} */
+
+.mat-em-bloco-mult{
+    display: block;
+    margin: 1rem 0;
+}
+
+
+
+@media (max-width: 400px) {
+
+    p {
+        text-align: left;
+    }
+
+}
+
+
+
+
+
+
+
+
 
 
 /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
 /* APARECE UMA MARGEM ABAIXO DESTA DIV PARA TELAS MUITO GRANDES EM RELAÇÃO AO APPLETS EXIBIDO */
 /* Parece ser problema no padding botton definido com style diretamente no html */
 /* Fazer @media para o tamanho exato dos applets, so que não será na main. */
-.container-principal .applet-geogebra-cel,
+/* .container-principal .applet-geogebra-cel,
 .container-principal .applet-geogebra-desk{
     position: relative;
     height: 0;
@@ -112,11 +168,7 @@ strong{
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     background-color: black;
     display: flex;
-    justify-content: center;
-            /* display: flex;
-                justify-content: center;
-                align-items: center; */
-                
+    justify-content: center;                
 }
 .container-principal .applet-geogebra-cel iframe,
 .container-principal .applet-geogebra-desk iframe {
@@ -125,11 +177,28 @@ strong{
     
 }
 
+
 .container-principal .applet-geogebra-cel {
     position: absolute;
     top: 0;
     visibility: hidden;
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* .container-principal .applet-desktop {
@@ -141,7 +210,7 @@ strong{
 } */
 
 
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
     .container-principal .applet-geogebra-desk {
         position: absolute;
         top: 0;
@@ -152,7 +221,7 @@ strong{
         position: static;
         visibility: visible;
     }
-}
+} */
 
 
 
@@ -167,29 +236,6 @@ strong{
 
 
 
-@media (max-width: 600px) {
-    /* .container-titulos h1{
-        font-size: 10vw;
-    }    
-    .container-titulos h2{
-        font-size: 2.5vw;
-    } */
-    p{
-        text-align: left;
-    }
-    /* .container-principal .applet-desktop {
-        visibility: hidden;
-        position: absolute;
-        top: 0px;
-    }
-    .container-principal .applet-celular {
-        visibility: visible;
-        position: static;
-    } */
-}
 
-.revisar * {
-    background-color: rgb(255, 109, 109);
-    color: black;
-}
+
 
