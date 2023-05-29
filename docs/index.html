@@ -4,18 +4,49 @@
 	3. Fechar nav com transição suave
 	4. Imagem de capa com EDO
 	5. Revisar a página da história do projeto
-	6. Bug da cor de fundo na página de história do projeto ao arrastar no visor do celular
+	6. Fazer responsividade vertical dos applets cel2, desk2 e desk3 do sistema massa-mola-amortecedor.
 
-	Responsividade da imagem no container principal, que deve continuar diminuindo em telas pequenas
+	Usar imagem como plano de fundo? Boa saída para o bug do arrastar:
+		body {
+		background-image: url(caminho/para/sua/imagem.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		}
 
-	Usar imagem como plano de fundo?
-body {
-  background-image: url(caminho/para/sua/imagem.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-}
+	7. Melhorar scrool do nav
+	8. Fazer fórmulas responsivas a partir da proxima página
 
-	Melhorar scrool do nav
+
+
+	
+	<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wrap no MathJax</title>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+  <style>
+    @media screen and (max-width: 767px) {
+      .MathJax {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p>Exemplo de equação com wrap:</p>
+  <div class="MathJax">
+    \[
+    \begin{align*}
+      f(x) &= \frac{x^2 + 3x + 2}{x + 1} \\
+           &= x + 2
+    \end{align*}
+    \]
+  </div>
+</body>
+</html>
+
 
  -->
  <!-- OBS: Sempre buscar responsividade em telas que vão de largura de 250px até 2000px -->

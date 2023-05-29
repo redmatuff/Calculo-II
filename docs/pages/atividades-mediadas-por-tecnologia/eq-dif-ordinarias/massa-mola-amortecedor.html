@@ -121,18 +121,28 @@
 		<p>O applet abaixo foi construido para visualizar melhor esta equivalência.</p>
 
 		
-		<iframe scrolling="no" title="RedtMat Soma-Seno-Cosseno cel3" src="https://www.geogebra.org/material/iframe/id/t3txs8bz/width/370/height/630/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="370px" height="630px" style="border:0px;"> </iframe>
-		
-		<div class="revisar"><h2>REESCREVER DAQUI EM DIANTE E MELHORAR RESPONSIVIDADE DO APPLET</h2></div>
-
-		
-		<!-- <div class="applet-geogebra-desk" style="padding-bottom: 111%; margin: 0rem;">
-			<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
+		<div class="container-geogebra-applet">
+			<div class="container-geogebra-applet-erro">
+				<span class="revisar">
+					<p>Erro: É necessário uma tela maior para exibir o Applet</p>
+				</span>
+			</div>
+			<div class="container-geogebra-applet-cel" style="padding-bottom: 150%; margin: 0rem;">
+				<iframe scrolling="no" title="RedtMat Soma-Seno-Cosseno cel3" src="https://www.geogebra.org/material/iframe/id/t3txs8bz/width/387/height/565/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="387px" height="565px" style="border:0px;"> </iframe>
+			</div>
+			
+			
+			<div class="container-geogebra-applet-desk" style="padding-bottom: 90%; margin: 0rem;">
+				<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
+			</div>
+			<div class="container-geogebra-applet-wide" style="padding-bottom: 65%; margin: 0rem;">
+				<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
+			</div>
 		</div>
-		<div class="applet-geogebra-cel" style="padding-bottom: 111%; margin: 0rem;">
-			<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
-		</div> -->
+		
 
+
+		<div class="revisar"><h2>REESCREVER DAQUI EM DIANTE E MELHORAR RESPONSIVIDADE DO APPLET</h2></div>
 
 		<h2>Demonstração Matemática da Equivalência das Soluções</h2>
 
@@ -164,9 +174,12 @@
 		\]</span>
 
 		<p>Vamos manter o foco na segunda equação. Como cosseno é uma função cíclica, sabemos que:</p>
-			
-		<span class="mat-em-bloco">\[\cos(a + b) = \cos(a + b - 2\pi) = \cos(a - (2\pi -b))\]</span>
 		
+		<div style="text-align: center;">
+		<span class="mat-em-bloco">\(\cos(a + b) = \cos(a + b - 2\pi) \)<span>\( = \cos(a - (2\pi -b))\)</span></span>
+		</div>
+
+
 		<p>Portanto:</p>
 
 		<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
@@ -176,10 +189,13 @@
 
 		<p>Agora vamos aplicar a identidade trigonométrica no termo da direita equação:</p>
 
-		<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
-		\[
-		\frac{x(t)} {e^{-γt/2}}  = A \cdot [\cos(\omega_d \cdot t)\cos(2 \pi - \phi) + \sin(\omega_d \cdot t)\sin(2 \pi - \phi) ]
-		\]</span>
+		<div style="text-align: center;">
+		<span class="mat-em-bloco-mult" style="color: rgb(0, 0, 180);">
+		\(
+		\frac{x(t)} {e^{-γt/2}} = A \cdot [\cos(\omega_d \cdot t)\cos(2 \pi - \phi) + \)<span style="color: rgb(0,0,180)">
+		\( \sin(\omega_d \cdot t)\sin(2 \pi - \phi) ]\)
+		</span></span>
+		</div>
 
 		<p>Aplicando a distributiva e rearranjando, temos:</p>
 
@@ -230,35 +246,39 @@
 		<p>Uma vez que as constantes são definidas pelas condições de contorno, matematicamente não importa a maneira como vamos escrever nossa solução, mas a solução onde aparece apenas um termo trigonométrico apresenta um significado fisico mais palpável para as constantes.</p>
 
 
-		<!-- <div class="revisar">
-			<p>CONTINUAR A PARTIR DAQUI DEPOIS</p>
-		
-		<p>
-			Solução de um sistema sub-amortecido
-		</p>
-		<p>
-			<span class="mat-em-linha">\( f(t) = A \cdot e^{-\frac{b}{2m}t} \cos(wt - \varphi) \)</span>
-		</p>
-		</div> -->
+
 
 		<h2>Applet para Sistema Sub-Amortecido</h2>
 
 		<p>Com o applet abaixo é possível verificar como cada variável (com sentido físico) influencia na função que descreve a posição do centro de massa do objeto ao longo do tempo.</p>
 		<p>A solução da EDO nos permite descrever com eficiência diversos problemas físicos.</p>
 
-		<!-- <div class="applet-geogebra-desk" style="padding-bottom: 52%; margin: 0rem;">
-			<iframe scrolling="no" title="Massa-Mola-Amortecedor-Desktop-Versao4" src="https://www.geogebra.org/material/iframe/id/jbej9k4k/width/1466/height/706/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1466px" height="706px" style="border:0px;"> </iframe>
-		</div> -->
+		<div class="container-geogebra-applet">
+			<div class="container-geogebra-applet-erro">
+				<span class="revisar">
+					<p>Erro: É necessário uma tela maior para exibir o Applet</p>
+				</span>
+			</div>
+			<div class="container-geogebra-applet-cel" style="padding-bottom: 85%; margin: 0rem;">
+				<iframe scrolling="no" title="Massa-Mola-Amort-CelSimplesV4" src="https://www.geogebra.org/material/iframe/id/z7ugj4gk/width/742/height/629/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="742px" height="629px" style="border:0px;"></iframe>
+			</div>
 
-		<!-- <div class="applet-desktop">
+			<div class="container-geogebra-applet-desk" style="padding-bottom: 85%; margin: 0rem;">
+				<iframe scrolling="no" title="Massa-Mola-Amort-CelSimplesV4" src="https://www.geogebra.org/material/iframe/id/z7ugj4gk/width/742/height/629/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="742px" height="629px" style="border:0px;"></iframe>
+			</div>
 
-			<iframe scrolling="no" title="Massa-Mola-Amortecedor-Desktop-Versao4" src="https://www.geogebra.org/material/iframe/id/jbej9k4k/width/1466/height/706/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1466px" height="706px" style="border:0px;"> </iframe>
-			
-		</div> -->
-<!-- 
-		<div class="applet-geogebra-cel" style="padding-bottom: 85%;">
-			<iframe scrolling="no" title="Massa-Mola-Amort-CelSimplesV4" src="https://www.geogebra.org/material/iframe/id/z7ugj4gk/width/742/height/629/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="742px" height="629px" style="border:0px;"> </iframe>
-		</div> -->
+			<div class="container-geogebra-applet-wide" style="padding-bottom: 49%; margin: 0rem;">
+				<iframe scrolling="no" title="Massa-Mola-Amortecedor-Desktop-Versao4" src="https://www.geogebra.org/material/iframe/id/jbej9k4k/width/1466/height/706/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1466px" height="706px" style="border:0px;"> </iframe>
+			</div>
+
+			<!-- <div class="container-geogebra-applet-desk2">
+
+				<iframe scrolling="no" title="Massa-Mola-Amortecedor-Desktop-Versao4" src="https://www.geogebra.org/material/iframe/id/jbej9k4k/width/1466/height/706/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1466px" height="706px" style="border:0px;"> </iframe>
+				
+			</div> -->
+
+
+		</div>
 
 		<h2>Exercício:</h2>
 

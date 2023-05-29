@@ -110,33 +110,15 @@ strong{
     color: black;
 }
 
-.container-principal span > * {
-    max-width: calc(100vw - 6rem);
-}
-
-/* .mat-em-linha > * {
-    background-color: red;
-    
-} */
-/* .mat-em-bloco,
-.mat-em-bloco-mult {
-    background-color: red;
-    width: 1px;
-    
-}
-
-.mat-em-bloco *,
-.mat-em-bloco-mult * {
-    background-color: red;
-    width: 1px;
-
-} */
-
 .mat-em-bloco-mult{
     display: block;
-    margin: 1rem 0;
+    margin: 3rem 0;
 }
 
+.mat-em-bloco,
+.mat-em-linha {
+    word-wrap: break-word;
+}
 
 
 @media (max-width: 400px) {
@@ -172,9 +154,7 @@ strong{
 }
 .container-principal .applet-geogebra-cel iframe,
 .container-principal .applet-geogebra-desk iframe {
-    max-width: 100%;
-
-    
+    max-width: 100%;   
 }
 
 
