@@ -1,11 +1,67 @@
+<!-- DICAS:
+Criar nova página:
+	Copiar um modelo tendo o cuidado com o nível que a página terá no diretório.
+
+Inserção de imagens responsivas:
+		<div class="container-img">
+			<img class="img-direita" src="../../../assets/img/atv-med-tec/edo/massa-mola-amort-forcas.gif" alt="Animação de um sistema Massa-Mola-Amortecedor">
+		</div>
+
+Inserção de fórmulas responsivas:
+		<div style="text-align: center;">
+			<span class="mat-em-bloco" style="color: rgb(130, 0, 30);">
+				<span>
+					\(
+
+					\)
+				</span>
+				<span>
+					\(
+
+					\)
+				</span>
+			</span>
+		</div> 
+
+Inserção de applets responsivos: ACERTAR O QUE ESTÁ EM "??" E EM "..."
+		<div class="container-geogebra-applet">
+			<div class="container-geogebra-applet-erro">
+				<span class="revisar">
+					<p>Erro: É necessário uma tela maior para exibir o Applet</p>
+				</span>
+			</div>
+			<div class="container-geogebra-applet-cel" style="padding-bottom: ??%; margin: 0rem;">
+				<iframe scrolling="no" ...></iframe> COLAR O IFRAME DO GEOGEBRA NESTA LINHA
+			</div>
+			
+			
+			<div class="container-geogebra-applet-desk" style="padding-bottom: ??%; margin: 0rem;">
+				<iframe scrolling="no" ...></iframe> COLAR O IFRAME DO GEOGEBRA NESTA LINHA
+			</div>
+			<div class="container-geogebra-applet-wide" style="padding-bottom: ??%; margin: 0rem;">
+				<iframe scrolling="no" ...></iframe> COLAR O IFRAME DO GEOGEBRA NESTA LINHA
+			</div>
+		</div>
+
+-->
+
+ <!-- OBS: Sempre buscar responsividade em telas que vão de largura de 320px até 1920px -->
+
+
 <!-- TODO:
+	 OBSERVAÇÃO: Remover dependencia de script externo? Atualizações de navegadores pode torná-los obsoletos com o tempo. Talvez seja melhor deixar a cargo do desenvolvedor externo fazer a manutenção destes scripts. Para dar mais manutenabilidade ao código, criou-se um script que faz a chamada para renderizar fórmulas.
+	
+	
 	1. Criar paginas do nav
 	2. Adicionar links para páginas do nav
-	3. Fechar nav com transição suave
+	3. Fechar nav com transição suave e melhorar scrool
 	4. Imagem de capa com EDO
 	5. Revisar a página da história do projeto
-	6. Fazer responsividade vertical dos applets cel2, desk2 e desk3 do sistema massa-mola-amortecedor.
+	6. Remover dependencia do servidor do geogebra para exibição dos applets, exportando-os como arquivos html para uma pasta específica do site.
+	
+	
 
+	?. Consertar bug do plano de fundo
 	Usar imagem como plano de fundo? Boa saída para o bug do arrastar:
 		body {
 		background-image: url(caminho/para/sua/imagem.jpg);
@@ -13,43 +69,7 @@
 		background-attachment: fixed;
 		}
 
-	7. Melhorar scrool do nav
-	8. Fazer fórmulas responsivas a partir da proxima página
-
-
-
-	
-	<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Wrap no MathJax</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-  <style>
-    @media screen and (max-width: 767px) {
-      .MathJax {
-        display: block !important;
-      }
-    }
-  </style>
-</head>
-<body>
-  <p>Exemplo de equação com wrap:</p>
-  <div class="MathJax">
-    \[
-    \begin{align*}
-      f(x) &= \frac{x^2 + 3x + 2}{x + 1} \\
-           &= x + 2
-    \end{align*}
-    \]
-  </div>
-</body>
-</html>
-
-
  -->
- <!-- OBS: Sempre buscar responsividade em telas que vão de largura de 250px até 2000px -->
 
 <!DOCTYPE html>
 <html lang="pt-br">

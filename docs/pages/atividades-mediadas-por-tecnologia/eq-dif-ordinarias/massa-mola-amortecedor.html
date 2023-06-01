@@ -10,9 +10,7 @@
 	<link rel="stylesheet" href="../../../assets/css/header.css">
 	<link rel="stylesheet" href="../../../assets/css/titulos.css">
 	<link rel="stylesheet" href="../../../assets/css/footer.css">
-	<link rel="stylesheet" href="../../../assets/css/massa-mola-amort.css">
-	<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+	<link rel="stylesheet" href="../../../assets/css/responsiv-applets.css">
 </head>
 <body>
 	<div class="header"></div>
@@ -29,7 +27,9 @@
 
 		<section>
 		<h2>Compreendendo o Problema</h2>
-		<img class="img-direita" src="../../../assets/img/atv-med-tec/edo/massa-mola-amort-forcas.gif" alt="Animação de um sistema Massa-Mola-Amortecedor">
+		<div class="container-img">
+			<img class="img-direita" src="../../../assets/img/atv-med-tec/edo/massa-mola-amort-forcas.gif" alt="Animação de um sistema Massa-Mola-Amortecedor">
+		</div>
 		<p>O estudo do sistema massa-mola-amortecedor é fundamental para compreender o comportamento vibratório de sistemas mecânicos. Nesse sistema, uma massa está conectada a uma mola e um amortecedor, resultando em um movimento oscilatório. Através de uma animação que simula esse movimento, é possível visualizar as características essenciais, como amplitude, frequência e amortecimento.</p>
 		<p>Neste trabalho, nosso objetivo é explorar as propriedades desse sistema e investigar a influência dos parâmetros e condições iniciais no movimento oscilatório. Além disso, iremos destacar as aplicações práticas desse conhecimento. A combinação da análise teórica com a animação visual nos permitirá fornecer uma compreensão mais intuitiva e aprofundada desse sistema.</p>
 		</section>
@@ -96,9 +96,21 @@
 
 		<p style="text-indent: 0;">onde <span class="mat-em-linha">\( r \)</span> são as raízes da equação. Essas raízes podem ser reais ou complexas, dependendo do valor de <span class="mat-em-linha">\( γ² - 4ω² \)</span>, (que é o discriminante da equação característica) e elas determinam a natureza da solução da equação diferencial. Assumindo que <span class="mat-em-linha">\(γ² - 4ω² < 0\)</span> (fisicamente isto representa um o sistema é subamortecido), a solução geral é da forma:</p>
 
-		<span class="mat-em-bloco">\[
-		x(t) = e^{-γt/2} \cdot [C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
-		\]</span>
+		<div style="text-align: center;">
+			<span class="mat-em-bloco">
+				<span>
+					\(
+					x(t) = e^{-γt/2} \cdot
+					\)
+				</span>
+				<span>
+					\(
+					[C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
+					\)
+				</span>
+			</span>
+		</div> 
+
 
 		<p style="text-indent: 0;">onde <span class="mat-em-linha">\(ω_d = \sqrt{ω² - (γ/2)²}\)</span> é a frequência amortecida e <span class="mat-em-linha">\(C_1\)</span> e <span class="mat-em-linha">\(C_2\)</span> são constantes que podem ser determinadas a partir de condições iniciais.</p>
 
@@ -148,11 +160,29 @@
 
 		<p>Para transformar</p>
 
-		<span class="mat-em-bloco" style="color: rgb(130, 0, 30);">
-		\[
-		x(t) = e^{-γt/2} \cdot [C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
-		\]
-		</span>
+
+		<div style="text-align: center;">
+			<span class="mat-em-bloco" style="color: rgb(130, 0, 30);">
+				<span>
+					\(
+					x(t) = e^{-γt/2} \cdot
+					\)
+				</span>
+				<span>
+					\(
+					[C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
+					\)
+				</span>
+			</span>
+		</div>
+
+
+
+
+
+
+
+
 
 		<p style="text-indent: 0;">em</p>
 		
@@ -163,20 +193,44 @@
 
 		<p style="text-indent: 0;">vamos começar isolando termos que são idênticos nas duas equações:</p>
 
-		<span class="mat-em-bloco" style="color: rgb(130, 0, 30);">
-		\[
-		\frac{x(t)} {e^{-γt/2}}  =  C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)
-		\]</span>
+
+		<div style="text-align: center;">
+			<span class="mat-em-bloco" style="color: rgb(130, 0, 30);">
+				<span>
+					\(
+					\frac{x(t)} {e^{-γt/2}}  =  
+					\)
+				</span>
+				<span>
+					\(
+					C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)
+					\)
+				</span>
+			</span>
+		</div> 
+
+
 	
 		<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
 		\[
 		\frac{x(t)} {e^{-γt/2}}  = A \cdot \cos(\omega_d \cdot t + \phi)
 		\]</span>
 
-		<p>Vamos manter o foco na segunda equação. Como cosseno é uma função cíclica, sabemos que:</p>
+		<p>Vamos manter o foco na segunda equação. Como cosseno é uma função cíclica, e se repete a cada <span class="mat-em-linha">\(2 \pi\)</span>, sabemos que:</p>
 		
 		<div style="text-align: center;">
-		<span class="mat-em-bloco">\(\cos(a + b) = \cos(a + b - 2\pi) \)<span>\( = \cos(a - (2\pi -b))\)</span></span>
+			<span class="mat-em-bloco">
+				<span>
+					\(
+					\cos(a + b) = \cos(a + b - 2\pi)
+					\)
+				</span>
+				<span>
+					\(
+					= \cos(a - (2\pi -b))
+					\)
+				</span>
+			</span>
 		</div>
 
 
@@ -185,32 +239,39 @@
 		<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
 		\[
 		\frac{x(t)} {e^{-γt/2}}  = A \cdot \cos(\omega_d \cdot t - (2\pi - \phi))
-		\]</span>
+		\]
+		</span>
 
 		<p>Agora vamos aplicar a identidade trigonométrica no termo da direita equação:</p>
 
 		<div style="text-align: center;">
-		<span class="mat-em-bloco-mult" style="color: rgb(0, 0, 180);">
-		\(
-		\frac{x(t)} {e^{-γt/2}} = A \cdot [\cos(\omega_d \cdot t)\cos(2 \pi - \phi) + \)<span style="color: rgb(0,0,180)">
-		\( \sin(\omega_d \cdot t)\sin(2 \pi - \phi) ]\)
-		</span></span>
+			<span class="mat-em-bloco-mult" style="color: rgb(0, 0, 180);">
+				<span>
+					\(
+					\frac{x(t)} {e^{-γt/2}} = A \cdot [\cos(\omega_d \cdot t)\cos(2 \pi - \phi) +
+					\)
+				</span>
+				<span style="color: rgb(0,0,180)">
+					\(
+						\sin(\omega_d \cdot t)\sin(2 \pi - \phi) ]
+					\)
+				</span>
+			</span>
 		</div>
 
 		<p>Aplicando a distributiva e rearranjando, temos:</p>
 
 		<div style="text-align: center;">
-		
-		<span class="mat-em-bloco-mult" style="color: rgb(0, 0, 180);">
-		\(
-		\frac{x(t)} {e^{-γt/2}}  = \)<span style="color: rgb(0, 135, 90);">\([A \cos(2 \pi - \phi)]\)</span>\(\cdot\cos(\omega_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\([A \sin(2 \pi - \phi)]\)</span>\( \cdot\sin(\omega_d \cdot t)
-		\)</span>
-		
-		<span class="mat-em-bloco-mult" style="color: rgb(130, 0, 30);">
-		\(
-		\frac{x(t)} {e^{-γt/2}}  =  \)<span style="color: rgb(0, 135, 90);">\(C_1\)</span>\( \cdot cos(ω_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\(C_2\)</span>\( \cdot sin(ω_d \cdot t)
-		\)</span>
-
+			<span class="mat-em-bloco-mult" style="color: rgb(0, 0, 180);">
+				\(
+				\frac{x(t)} {e^{-γt/2}}  = \)<span style="color: rgb(0, 135, 90);">\([A \cos(2 \pi - \phi)]\)</span>\(\cdot\cos(\omega_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\([A \sin(2 \pi - \phi)]\)</span>\( \cdot\sin(\omega_d \cdot t)
+				\)
+			</span>
+			<span class="mat-em-bloco-mult" style="color: rgb(130, 0, 30);">
+				\(
+				\frac{x(t)} {e^{-γt/2}}  =  \)<span style="color: rgb(0, 135, 90);">\(C_1\)</span>\( \cdot cos(ω_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\(C_2\)</span>\( \cdot sin(ω_d \cdot t)
+				\)
+			</span>
 		</div>
 
 
@@ -293,4 +354,6 @@
 <script src="../../../assets/js/insere-header.js"></script>
 <script src="../../../assets/js/insere-titulos.js"></script>
 <script src="../../../assets/js/insere-footer.js"></script>
+<script src="../../../assets/js/renderiza-formulas.js"></script>
+
 </html>

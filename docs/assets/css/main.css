@@ -87,7 +87,7 @@ strong{
 .container-principal .img-direita{
     float: right;
     margin: 1rem 0rem 1rem 3rem;
-    max-width: calc(50vw - 3rem);
+    max-width: calc(40vw - 3rem);
 }
 .container-principal .img-esquerda {
     float: left;
@@ -110,21 +110,36 @@ strong{
     color: black;
 }
 
+/* Exibição e responsividade de fórmulas matemáticas */
 .mat-em-bloco-mult{
     display: block;
     margin: 3rem 0;
 }
-
 .mat-em-bloco,
 .mat-em-linha {
     word-wrap: break-word;
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 
     p {
         text-align: left;
+    }
+    .container-img {
+        display: flex;
+        justify-content: center;
+    }
+    .container-principal .img-direita {
+        float: none;
+        max-width: none;
+        margin: 1rem 0rem;
+    }
+
+    .container-principal .img-esquerda {
+        float: none;
+        max-width: none;
+        margin: 1rem 0rem;
     }
 
 }

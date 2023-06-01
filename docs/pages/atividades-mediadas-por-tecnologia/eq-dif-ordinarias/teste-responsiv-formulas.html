@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Wrap no MathJax</title>
+  <style>
+    @media screen and (max-width: 767px) {
+      .MathJax {
+        display: block !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p>Exemplo de equação com wrap:</p>
+  <div class="MathJax">
+    \[
+    \begin{align*}
+      f(x) &= \frac{x^2 + 3x + 2}{x + 1} \\
+           &= x + 2
+    \end{align*}
+    \]
+  </div>
+</body>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</html>
