@@ -77,7 +77,7 @@ strong{
 .container-principal {
     flex-grow: 1;
     margin: 2rem 5vw;
-    padding: 1rem; /* se não colocar um padding, o MathJax buga a responsividade de formulas em linha. */
+    padding: 1rem ; /* se não colocar um padding, o MathJax buga a responsividade de formulas em linha. */
 }
 
 .container-principal p {
@@ -114,10 +114,21 @@ strong{
 .mat-em-bloco-mult{
     display: block;
     margin: 3rem 0;
+    text-indent: 0rem;
+    /* O text-ident gera conflito com as fórmulas do MathJax */
 }
+
 .mat-em-bloco,
 .mat-em-linha {
+    margin: 0;
+    padding: 0;
     word-wrap: break-word;
+    text-indent: 0rem;
+    /* O text-ident gera conflito com as fórmulas do MathJax */
+}
+
+.mat-em-linha {
+
 }
 
 
@@ -129,14 +140,11 @@ strong{
     .container-img {
         display: flex;
         justify-content: center;
-        background-color: red;
         padding: 1%;
     }
     .container-img img {
-        max-width: 100%;
-        width: 90%;
-
-
+        max-width: 90%;
+        width: 80%;
     }
     .container-principal .img-direita {
         float: none;

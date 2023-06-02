@@ -26,362 +26,370 @@
 		<h1>Modelagem de um Sistema Massa-Mola-Amortecedor</h1>
 
 		<section>
-		<h2>Compreendendo o Problema</h2>
-		<div class="container-img">
-			<img class="img-direita" src="../../../assets/img/atv-med-tec/edo/massa-mola-amort-forcas.gif" alt="Animação de um sistema Massa-Mola-Amortecedor">
-		</div>
-		<p>O estudo do sistema massa-mola-amortecedor é fundamental para compreender o comportamento vibratório de sistemas mecânicos. Nesse sistema, uma massa está conectada a uma mola e um amortecedor, resultando em um movimento oscilatório. Através de uma animação que simula esse movimento, é possível visualizar as características essenciais, como amplitude, frequência e amortecimento.</p>
-		<p>Neste trabalho, nosso objetivo é explorar as propriedades desse sistema e investigar a influência dos parâmetros e condições iniciais no movimento oscilatório. Além disso, iremos destacar as aplicações práticas desse conhecimento. A combinação da análise teórica com a animação visual nos permitirá fornecer uma compreensão mais intuitiva e aprofundada desse sistema.</p>
+			<h2>Compreendendo o Problema</h2>
+			<div class="container-img">
+				<img class="img-direita" src="../../../assets/img/atv-med-tec/edo/massa-mola-amort-forcas.gif" alt="Animação de um sistema Massa-Mola-Amortecedor">
+			</div>
+			<p>O estudo do sistema massa-mola-amortecedor é fundamental para compreender o comportamento vibratório de sistemas mecânicos. Nesse sistema, uma massa está conectada a uma mola e um amortecedor, resultando em um movimento oscilatório. Através de uma animação que simula esse movimento, é possível visualizar as características essenciais, como amplitude, frequência e amortecimento.</p>
+			<p>Neste trabalho, nosso objetivo é explorar as propriedades desse sistema e investigar a influência dos parâmetros e condições iniciais no movimento oscilatório. Além disso, iremos destacar as aplicações práticas desse conhecimento. A combinação da análise teórica com a animação visual nos permitirá fornecer uma compreensão mais intuitiva e aprofundada desse sistema.</p>
 		</section>
 
 		<section>
-		<h2>Motivação</h2>
-		<p>Modelar um sistema massa-mola-amortecedor é uma habilidade crucial em várias áreas. Na engenharia mecânica, tais modelos ajudam a reduzir vibrações indesejadas em máquinas e motores, aumentando a eficiência. Na engenharia civil, são empregados para criar edifícios e estruturas resistentes a ventos fortes e terremotos, otimizando a segurança e a durabilidade.</p>
-		<p>Na engenharia aeroespacial, esses modelos podem ser aplicados no design de sistemas de suspensão de aeronaves, suavizando o impacto das turbulências e melhorando o conforto dos passageiros. No desenvolvimento de eletrônicos, sistemas massa-mola-amortecedores protegem componentes sensíveis de choques e vibrações, prolongando a vida útil do dispositivo.</p>
-		<p>Dominar esses modelos também desenvolve habilidades analíticas e de pensamento crítico. Esse conhecimento se torna uma ferramenta poderosa para resolver problemas complexos, sendo aplicável em diversas áreas além da física e engenharia.</p>
+			<h2>Motivação</h2>
+			<p>Modelar um sistema massa-mola-amortecedor é uma habilidade crucial em várias áreas. Na engenharia mecânica, tais modelos ajudam a reduzir vibrações indesejadas em máquinas e motores, aumentando a eficiência. Na engenharia civil, são empregados para criar edifícios e estruturas resistentes a ventos fortes e terremotos, otimizando a segurança e a durabilidade.</p>
+			<p>Na engenharia aeroespacial, esses modelos podem ser aplicados no design de sistemas de suspensão de aeronaves, suavizando o impacto das turbulências e melhorando o conforto dos passageiros. No desenvolvimento de eletrônicos, sistemas massa-mola-amortecedores protegem componentes sensíveis de choques e vibrações, prolongando a vida útil do dispositivo.</p>
+			<p>Dominar esses modelos também desenvolve habilidades analíticas e de pensamento crítico. Esse conhecimento se torna uma ferramenta poderosa para resolver problemas complexos, sendo aplicável em diversas áreas além da física e engenharia.</p>
 		</section>
 
 		<section>
-		<h2>Modelagem</h2>
-		<p>A modelagem de um sistema massa-mola-amortecedor usa a Lei de Newton, a Lei de Hooke, e um princípio adicional de que a força do amortecedor é inversamente proporcional à velocidade de deslocamento da massa (este princípio pode sofrer variações de acordo com a modelagem do amortecedor). Com essas forças atuando em conjunto, é possível estabelecer a equação diferencial que descreve o movimento do sistema.</p>
-		<p>A Segunda Lei de Newton afirma que a força resultante que atua sobre um corpo é igual à sua massa vezes sua aceleração. É dada pela equação:</p>
-    	<span class="mat-em-bloco">\[
-    	F_{\text{R}} = m \cdot a
-    	\]</span>
-    	<p>Por outro lado, a Lei de Hooke descreve a força restitutiva exercida por uma mola. Ela afirma que a força é proporcional ao deslocamento da mola a partir de sua posição de equilíbrio. A constante de proporcionalidade é a constante da mola, denotada por <span class="mat-em-linha">\(k\)</span>. A Lei de Hooke é dada pela equação:</p>
-    	<span class="mat-em-bloco">\[
-    	F_{\text{el}} = -k \cdot x
-    	\]</span>
-    	<p>Aqui, <span class="mat-em-linha">\(x\)</span> é o deslocamento da mola a partir de sua posição de equilíbrio. O sinal negativo indica que a força é exercida na direção oposta ao deslocamento.</p>
-		<p>É crucial compreender a força exercida pelo amortecedor no sistema. A característica principal de um amortecedor é sua tendência para diminuir a velocidade do sistema, gerando uma força que atua em direção contrária à velocidade. Portanto, quanto maior a velocidade, maior a força do amortecedor.</p>
-		<p>Em muitos casos, considera-se que a relação entre a força do amortecedor e a velocidade é linear. Com base nessa suposição, podemos introduzir uma constante de amortecimento, denotada por <span class="mat-em-linha">\(b\)</span>. Isso nos permite formular a força de amortecimento da seguinte maneira:</p>
-		<span class="mat-em-bloco">\[
-		F_{\text{amort}} = -b \cdot v
-		\]</span>
-		<p>Nesta fórmula, <span class="mat-em-linha">\(v\)</span> representa a velocidade do sistema. O sinal negativo enfatiza que a força do amortecedor atua contra a direção da velocidade.</p>
+			<h2>Modelagem</h2>
+			<p>A modelagem de um sistema massa-mola-amortecedor usa a Lei de Newton, a Lei de Hooke, e um princípio adicional de que a força do amortecedor é inversamente proporcional à velocidade de deslocamento da massa (este princípio pode sofrer variações de acordo com a modelagem do amortecedor). Com essas forças atuando em conjunto, é possível estabelecer a equação diferencial que descreve o movimento do sistema.</p>
+			<p>A Segunda Lei de Newton afirma que a força resultante que atua sobre um corpo é igual à sua massa vezes sua aceleração. É dada pela equação:</p>
+			<span class="mat-em-bloco">\[
+			F_{\text{R}} = m \cdot a
+			\]</span>
+			<p>Por outro lado, a Lei de Hooke descreve a força restitutiva exercida por uma mola. Ela afirma que a força é proporcional ao deslocamento da mola a partir de sua posição de equilíbrio. A constante de proporcionalidade é a constante da mola, denotada por <span class="mat-em-linha">\(k\)</span>. A Lei de Hooke é dada pela equação:</p>
+			<span class="mat-em-bloco">\[
+			F_{\text{el}} = -k \cdot x
+			\]</span>
+			<p>Aqui, <span class="mat-em-linha">\(x\)</span> é o deslocamento da mola a partir de sua posição de equilíbrio. O sinal negativo indica que a força é exercida na direção oposta ao deslocamento.</p>
+			<p>É crucial compreender a força exercida pelo amortecedor no sistema. A característica principal de um amortecedor é sua tendência para diminuir a velocidade do sistema, gerando uma força que atua em direção contrária à velocidade. Portanto, quanto maior a velocidade, maior a força do amortecedor.</p>
+			<p>Em muitos casos, considera-se que a relação entre a força do amortecedor e a velocidade é linear. Com base nessa suposição, podemos introduzir uma constante de amortecimento, denotada por <span class="mat-em-linha">\(b\)</span>. Isso nos permite formular a força de amortecimento da seguinte maneira:</p>
+			<span class="mat-em-bloco">\[
+			F_{\text{amort}} = -b \cdot v
+			\]</span>
+			<p>Nesta fórmula, <span class="mat-em-linha">\(v\)</span> representa a velocidade do sistema. O sinal negativo enfatiza que a força do amortecedor atua contra a direção da velocidade.</p>
+			<p>Uma vez que as forças atuantes em um sistema massa-mola-amortecedor foram identificadas, podemos agora estabelecer a equação diferencial que descreve o comportamento do sistema. A Segunda Lei de Newton estabelece que a soma das forças atuantes em um corpo é igual à massa do corpo multiplicada por sua aceleração. No caso de um sistema massa-mola-amortecedor, as três forças principais são a força da mola, a força do amortecedor e a força externa, se houver.</p>
+			<p>De acordo com a Segunda Lei de Newton, podemos então escrever a seguinte equação para o sistema:</p>
+			<span class="mat-em-bloco">\[
+			F_{\text{externa}} = m \cdot a + b \cdot v + k \cdot x
+			\]</span>
+			<p>Como no nosso exemplo a força externa é zero, isso é equivalente a:</p>
+			<span class="mat-em-bloco">\[
+			m \cdot \frac{d^2x}{dt^2} + b \cdot \frac{dx}{dt} + k \cdot x = 0
+			\]</span>
+			<p>Esta é a equação diferencial que governa o movimento de um sistema massa-mola-amortecedor. As soluções desta equação descreverão a posição da massa ao longo do tempo sob a ação das forças da mola, do amortecedor e de quaisquer forças externas.</p>
+		</section>
+	
 
-		<p>Uma vez que as forças atuantes em um sistema massa-mola-amortecedor foram identificadas, podemos agora estabelecer a equação diferencial que descreve o comportamento do sistema. A Segunda Lei de Newton estabelece que a soma das forças atuantes em um corpo é igual à massa do corpo multiplicada por sua aceleração. No caso de um sistema massa-mola-amortecedor, as três forças principais são a força da mola, a força do amortecedor e a força externa, se houver.</p>
+		<section>
+			<h2>Solução</h2>
+			<p>Um sistema massa-mola-amortecedor é um modelo físico que descreve o comportamento vibratório de um objeto ligado a uma mola onde ocorre dissipação de energia. Ao aplicar conceitos da teoria de equações diferenciais ordinárias, podemos resolver a equação diferencial que governa o sistema e determinar a posição da massa em relação ao tempo, possibilitando compreender e prever o movimento oscilatório do sistema.</p>
 
-		<p>De acordo com a Segunda Lei de Newton, podemos então escrever a seguinte equação para o sistema:</p>
-		<span class="mat-em-bloco">\[
-		F_{\text{externa}} = m \cdot a + b \cdot v + k \cdot x
-		\]</span>
-		<p>Como no nosso exemplo a força externa é zero, isso é equivalente a:</p>
-		<span class="mat-em-bloco">\[
-		m \cdot \frac{d^2x}{dt^2} + b \cdot \frac{dx}{dt} + k \cdot x = 0
-		\]</span>
-		<p>Esta é a equação diferencial que governa o movimento de um sistema massa-mola-amortecedor. As soluções desta equação descreverão a posição da massa ao longo do tempo sob a ação das forças da mola, do amortecedor e de quaisquer forças externas.</p>
+			<p>Para simplificar, vamos dividir todos os termos por <span class="mat-em-linha">\(m\)</span>, então a equação se torna:</p>
+
+			<span class="mat-em-bloco">\[
+			\frac{d^2x}{dt^2} + \frac{b}{m} \cdot \frac{dx}{dt} + \frac{k}{m} \cdot x = 0
+			\]</span>
+
+			<p>Agora, vamos substituir <span class="mat-em-linha">\(\frac{b}{m}\)</span> por <span class="mat-em-linha">\(γ\)</span> (fator de amortecimento) e <span class="mat-em-linha">\(\frac{k}{m}\)</span> por <span class="mat-em-linha">\(ω²\)</span> (quadrado da frequência natural), obtendo:</p>
+
+			<span class="mat-em-bloco">\[
+			\frac{d^2x}{dt^2} + γ \cdot \frac{dx}{dt} + ω² \cdot x = 0
+			\]</span>
+
+			<p>A equação característica associada a essa equação diferencial é uma equação quadrática dada por:</p>
+
+			<span class="mat-em-bloco">\[
+			r² + γr + ω² = 0
+			\]</span>
+
+			<p style="text-indent: 0;">onde <span class="mat-em-linha">\( r \)</span> são as raízes da equação. Essas raízes podem ser reais ou complexas, dependendo do valor de <span class="mat-em-linha">\( γ² - 4ω² \)</span>, (que é o discriminante da equação característica) e elas determinam a natureza da solução da equação diferencial. Assumindo que <span class="mat-em-linha">\(γ² - 4ω² < 0\)</span> (fisicamente isto representa um o sistema é subamortecido), a solução geral é da forma:</p>
+
+			<div style="text-align: center;">
+				<span class="mat-em-bloco">
+					<span>
+						\(
+						x(t) = e^{-γt/2} \cdot
+						\)
+					</span>
+					<span>
+						\(
+						[C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
+						\)
+					</span>
+				</span>
+			</div> 
+
+
+			<p style="text-indent: 0;">onde <span class="mat-em-linha">\(ω_d = \sqrt{ω² - (γ/2)²}\)</span> é a frequência amortecida e <span class="mat-em-linha">\(C_1\)</span> e <span class="mat-em-linha">\(C_2\)</span> são constantes que podem ser determinadas a partir de condições iniciais.</p>
+
+			<p>Aqui vale uma observação. E se <span class="mat-em-linha">\(γ² - 4ω² > 0\)</span> ? Fisicamente teríamos um sistema superamortecido (cuja solução não é o escopo desta página). A nível de curiosidade, em um sistema superamortecido não há oscilação. Em vez disso, o sistema volta gradualmente ao seu estado de equilíbrio sem nunca ultrapassá-lo. Isso ocorre devido ao fato de que todas as soluções da equação diferencial decrescem exponencialmente com o tempo. Neste caso, força elástica é pequena em relação a força de amortecimento de modo que a solução deixa de ser oscilatória.
+			</p>
 		</section>
 
-		<h2>Solução</h2>
-		<p>Um sistema massa-mola-amortecedor é um modelo físico que descreve o comportamento vibratório de um objeto ligado a uma mola onde ocorre dissipação de energia. Ao aplicar conceitos da teoria de equações diferenciais ordinárias, podemos resolver a equação diferencial que governa o sistema e determinar a posição da massa em relação ao tempo, possibilitando compreender e prever o movimento oscilatório do sistema.</p>
-
-		<p>Para simplificar, vamos dividir todos os termos por <span class="mat-em-linha">\(m\)</span>, então a equação se torna:</p>
-
-		<span class="mat-em-bloco">\[
-		\frac{d^2x}{dt^2} + \frac{b}{m} \cdot \frac{dx}{dt} + \frac{k}{m} \cdot x = 0
-		\]</span>
-
-		<p>Agora, vamos substituir <span class="mat-em-linha">\(\frac{b}{m}\)</span> por <span class="mat-em-linha">\(γ\)</span> (fator de amortecimento) e <span class="mat-em-linha">\(\frac{k}{m}\)</span> por <span class="mat-em-linha">\(ω²\)</span> (quadrado da frequência natural), obtendo:</p>
-
-		<span class="mat-em-bloco">\[
-		\frac{d^2x}{dt^2} + γ \cdot \frac{dx}{dt} + ω² \cdot x = 0
-		\]</span>
-
-		<p>A equação característica associada a essa equação diferencial é uma equação quadrática dada por:</p>
-
-		<span class="mat-em-bloco">\[
-		r² + γr + ω² = 0
-		\]</span>
-
-		<p style="text-indent: 0;">onde <span class="mat-em-linha">\( r \)</span> são as raízes da equação. Essas raízes podem ser reais ou complexas, dependendo do valor de <span class="mat-em-linha">\( γ² - 4ω² \)</span>, (que é o discriminante da equação característica) e elas determinam a natureza da solução da equação diferencial. Assumindo que <span class="mat-em-linha">\(γ² - 4ω² < 0\)</span> (fisicamente isto representa um o sistema é subamortecido), a solução geral é da forma:</p>
-
-		<div style="text-align: center;">
-			<span class="mat-em-bloco">
-				<span>
-					\(
-					x(t) = e^{-γt/2} \cdot
-					\)
-				</span>
-				<span>
-					\(
-					[C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
-					\)
-				</span>
-			</span>
-		</div> 
-
-
-		<p style="text-indent: 0;">onde <span class="mat-em-linha">\(ω_d = \sqrt{ω² - (γ/2)²}\)</span> é a frequência amortecida e <span class="mat-em-linha">\(C_1\)</span> e <span class="mat-em-linha">\(C_2\)</span> são constantes que podem ser determinadas a partir de condições iniciais.</p>
-
-		<p>Aqui vale uma observação. E se <span class="mat-em-linha">\(γ² - 4ω² > 0\)</span> ? Fisicamente teríamos um sistema superamortecido (cuja solução não é o escopo desta página). A nível de curiosidade, em um sistema superamortecido não há oscilação. Em vez disso, o sistema volta gradualmente ao seu estado de equilíbrio sem nunca ultrapassá-lo. Isso ocorre devido ao fato de que todas as soluções da equação diferencial decrescem exponencialmente com o tempo. Neste caso, força elástica é pequena em relação a força de amortecimento de modo que a solução deixa de ser oscilatória.
-		</p>
-
-
-		<h2>Reescrevendo a Solução</h2>
-		
-		<p>Existe uma maneira alternativa de expressar a solução da equação diferencial homogênea que permite eliminar a soma das funções trigonométricas seno e cosseno. Isso é feito pela introdução de um termo de fase em uma única função cosseno. A solução pode ser expressa de forma equivalente como:</p>
-
-		<span class="mat-em-bloco">\[ x(t) = A \cdot e^{-\frac{\gamma t}{2}} \cdot \cos(\omega_d \cdot t + \phi) \]</span>
-
-		<p style="text-indent: 0;">onde <span class="mat-em-linha">\(A\)</span> é a amplitude resultante e <span class="mat-em-linha">\(\phi\)</span> é a fase.</p>
-
-		<p>Nesta nova expressão, <span class="mat-em-linha">\(A\)</span> e <span class="mat-em-linha">\(\phi\)</span> são escolhidos de tal forma que as duas expressões são equivalentes para todos os valores de <span class="mat-em-linha">\(t\)</span>. Esta transformação é possível devido às identidades trigonométricas, especificamente a identidade para a soma dos ângulos, que afirma que:</p>
-
-
-		<div style="text-align: center;">
-			<span class="mat-em-bloco">
-				<span>
-					\(
-					\cos(a+b) =
-					\)
-				</span>
-				<span>
-					\(
-					\cos(a)\cos(b) - \sin(a)\sin(b)
-					\)
-				</span>
-			</span>
-		</div>
-
-
-
-
-		<p>Agora as novas constantes a serem determinadas pelas condições de contorno são <span class="mat-em-linha">\(A\)</span> e <span class="mat-em-linha">\(\phi\)</span>. Essa forma alternativa tem o benefício de simplificar a expressão ao eliminar a necessidade de lidar com uma soma de funções trigonométricas, substituindo-a por uma única função cosseno com uma amplitude e fase ajustadas. Essa representação é frequentemente mais conveniente, especialmente em aplicações como a análise de sistemas oscilatórios e a solução de equações diferenciais em física e engenharia.</p>
-
-		<p>O applet abaixo foi construido para visualizar melhor esta equivalência.</p>
-
-		
-		<div class="container-geogebra-applet">
-			<div class="container-geogebra-applet-erro">
-				<span class="revisar">
-					<p>Erro: É necessário uma tela maior para exibir o Applet</p>
-				</span>
-			</div>
-			<div class="container-geogebra-applet-cel" style="padding-bottom: 150%; margin: 0rem;">
-				<iframe scrolling="no" title="RedtMat Soma-Seno-Cosseno cel3" src="https://www.geogebra.org/material/iframe/id/t3txs8bz/width/387/height/565/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="387px" height="565px" style="border:0px;"> </iframe>
-			</div>
+		<section>
+			<h2>Reescrevendo a Solução</h2>
 			
+			<p>Existe uma maneira alternativa de expressar a solução da equação diferencial homogênea que permite eliminar a soma das funções trigonométricas seno e cosseno. Isso é feito pela introdução de um termo de fase em uma única função cosseno. A solução pode ser expressa de forma equivalente como:</p>
+
+			<span class="mat-em-bloco">\[ x(t) = A \cdot e^{-\frac{\gamma t}{2}} \cdot \cos(\omega_d \cdot t + \phi) \]</span>
+
+			<p style="text-indent: 0;">onde <span class="mat-em-linha">\(A\)</span> é a amplitude resultante e <span class="mat-em-linha">\(\phi\)</span> é a fase.</p>
+
+			<p>Nesta nova expressão, <span class="mat-em-linha">\(A\)</span> e <span class="mat-em-linha">\(\phi\)</span> são escolhidos de tal forma que as duas expressões são equivalentes para todos os valores de <span class="mat-em-linha">\(t\)</span>. Esta transformação é possível devido às identidades trigonométricas, especificamente a identidade para a soma dos ângulos, que afirma que:</p>
+
+
+			<div style="text-align: center;">
+				<span class="mat-em-bloco">
+					<span>
+						\(
+						\cos(a+b) =
+						\)
+					</span>
+					<span>
+						\(
+						\cos(a)\cos(b) - \sin(a)\sin(b)
+						\)
+					</span>
+				</span>
+			</div>
+
+
+
+
+			<p>Agora as novas constantes a serem determinadas pelas condições de contorno são <span class="mat-em-linha">\(A\)</span> e <span class="mat-em-linha">\(\phi\)</span>. Essa forma alternativa tem o benefício de simplificar a expressão ao eliminar a necessidade de lidar com uma soma de funções trigonométricas, substituindo-a por uma única função cosseno com uma amplitude e fase ajustadas. Essa representação é frequentemente mais conveniente, especialmente em aplicações como a análise de sistemas oscilatórios e a solução de equações diferenciais em física e engenharia.</p>
+
+			<p>O applet abaixo foi construido para visualizar melhor esta equivalência.</p>
+
 			
-			<div class="container-geogebra-applet-desk" style="padding-bottom: 90%; margin: 0rem;">
-				<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
-			</div>
-			<div class="container-geogebra-applet-wide" style="padding-bottom: 65%; margin: 0rem;">
-				<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
-			</div>
-		</div>
-		
-
-
-		<div class="revisar"><h2>REESCREVER DAQUI EM DIANTE E MELHORAR RESPONSIVIDADE DO APPLET</h2></div>
-
-		<h2>Demonstração Matemática da Equivalência das Soluções</h2>
-
-		<p>Para transformar</p>
-
-
-		<div style="text-align: center;">
-			<span class="mat-em-bloco" style="color: rgb(130, 0, 30);">
-				<span>
-					\(
-					x(t) = e^{-γt/2} \cdot
-					\)
-				</span>
-				<span>
-					\(
-					[C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
-					\)
-				</span>
-			</span>
-		</div>
-
-
-
-
-
-
-
-
-
-		<p style="text-indent: 0;">em</p>
-		
-		<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
-		\[
-		x(t) = A \cdot e^{-\frac{\gamma t}{2}} \cdot \cos(\omega_d \cdot t + \phi)
-		\]</span>
-
-		<p style="text-indent: 0;">vamos começar isolando termos que são idênticos nas duas equações:</p>
-
-
-		<div style="text-align: center;">
-			<span class="mat-em-bloco" style="color: rgb(130, 0, 30);">
-				<span>
-					\(
-					\frac{x(t)} {e^{-γt/2}}  =  
-					\)
-				</span>
-				<span>
-					\(
-					C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)
-					\)
-				</span>
-			</span>
-		</div> 
-
-
-	
-		<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
-		\[
-		\frac{x(t)} {e^{-γt/2}}  = A \cdot \cos(\omega_d \cdot t + \phi)
-		\]</span>
-
-		<p>Vamos manter o foco na segunda equação. Como cosseno é uma função cíclica, e se repete a cada <span class="mat-em-linha">\(2 \pi\)</span>, sabemos que:</p>
-		
-		<div style="text-align: center;">
-			<span class="mat-em-bloco">
-				<span>
-					\(
-					\cos(a + b) = \cos(a + b - 2\pi)
-					\)
-				</span>
-				<span>
-					\(
-					= \cos(a - (2\pi -b))
-					\)
-				</span>
-			</span>
-		</div>
-
-
-		<p>Portanto:</p>
-
-		<div style="text-align: center;">
-			<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
-				<span>
-					\(
-					\frac{x(t)} {e^{-γt/2}}  =
-					\)
-				</span>
-				<span>
-					\(
-		 			A \cdot \cos(\omega_d \cdot t - (2\pi - \phi))
-					\)
-				</span>
-			</span>
-		</div>
-
-	
-
-		<p>Agora vamos aplicar a identidade trigonométrica no termo da direita equação:</p>
-
-		<div style="text-align: center;">
-			<span class="mat-em-bloco-mult" style="color: rgb(0, 0, 180);">
-				<span>
-					\(
-					\frac{x(t)} {e^{-γt/2}} = 
-					\)
-				</span>
-				<span>
-					\(
-					A \cdot [\cos(\omega_d \cdot t)\cos(2 \pi - \phi) +
-					\)
-				</span>
-				<span style="color: rgb(0,0,180)">
-					\(
-						\sin(\omega_d \cdot t)\sin(2 \pi - \phi) ]
-					\)
-				</span>
-			</span>
-		</div>
-
-		<p>Aplicando a distributiva e rearranjando, temos:</p>
-
-		<div style="text-align: center;">
-			<span class="mat-em-bloco-mult" style="color: rgb(0, 0, 180);">
-				\(
-				\frac{x(t)} {e^{-γt/2}}  = \)<span style="color: rgb(0, 135, 90);">\([A \cos(2 \pi - \phi)]\)</span>\(\cdot\cos(\omega_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\([A \sin(2 \pi - \phi)]\)</span>\( \cdot\sin(\omega_d \cdot t)
-				\)
-			</span>
-			<span class="mat-em-bloco-mult" style="color: rgb(130, 0, 30);">
-				\(
-				\frac{x(t)} {e^{-γt/2}}  =  \)<span style="color: rgb(0, 135, 90);">\(C_1\)</span>\( \cdot cos(ω_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\(C_2\)</span>\( \cdot sin(ω_d \cdot t)
-				\)
-			</span>
-		</div>
-
-
-		<p>Uma vez que <span class="mat-em-linha">\(\sin(2 \pi - \phi)\)</span> e <span class="mat-em-linha">\(\cos(2 \pi - \phi)\)</span> são constantes, podems comparar as duas expressões, e para que elas sejam iguais, precisamos descobrir os valores de <span class="mat-em-linha">\(A\)</span> e <span class="mat-em-linha">\(\phi\)</span> tal que:</p>
-
-		<span class="mat-em-bloco">
-		\[
-		C_1 = A \cos(2 \pi - \phi)
-		\]</span>
-
-		<span class="mat-em-bloco">\[
-		C_2 = A \sin(2 \pi - \phi)
-		\]</span>
-
-		<p>Temos um sistema não linear de duas equações que pode ser facilmente resolvido dividindo a segunda equação pela primeira, assim poderemos escrever <span class="mat-em-linha">\(\phi\)</span> em função de <span class="mat-em-linha">\(C_1\)</span> e <span class="mat-em-linha">\(C_2\)</span>
-
-		<span class="mat-em-bloco">\[
-		\frac{C_2}{C_1} = \tan(2 \pi - \phi)
-		\]</span>
-		<span class="mat-em-bloco">\[
-		\phi = 2\pi - \arctan(\frac{C_2}{C_1})
-		\]</span>
-
-		<p>Escolhendo a primeira das equações anteriores para substituir o valor de <span class="mat-em-linha">\(\phi\)</span> temos:</p>
-
-		<span class="mat-em-bloco">\[
-		A = \frac{C_1}{\cos(2\pi - (2\pi - \arctan(\frac{C_2}{C_1})))}
-		\]</span>
-		<span class="mat-em-bloco">\[
-		A = \frac{C_1}{\cos(\arctan(\frac{C_2}{C_1}))}
-		\]</span>
-
-		<p>Uma vez que as constantes são definidas pelas condições de contorno, matematicamente não importa a maneira como vamos escrever nossa solução, mas a solução onde aparece apenas um termo trigonométrico apresenta um significado fisico mais palpável para as constantes.</p>
-
-
-
-
-		<h2>Applet para Sistema Sub-Amortecido</h2>
-
-		<p>Com o applet abaixo é possível verificar como cada variável (com sentido físico) influencia na função que descreve a posição do centro de massa do objeto ao longo do tempo.</p>
-		<p>A solução da EDO nos permite descrever com eficiência diversos problemas físicos.</p>
-
-		<div class="container-geogebra-applet">
-			<div class="container-geogebra-applet-erro">
-				<span class="revisar">
-					<p>Erro: É necessário uma tela maior para exibir o Applet</p>
-				</span>
-			</div>
-			<div class="container-geogebra-applet-cel" style="padding-bottom: 85%; margin: 0rem;">
-				<iframe scrolling="no" title="Massa-Mola-Amort-CelSimplesV4" src="https://www.geogebra.org/material/iframe/id/z7ugj4gk/width/742/height/629/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="742px" height="629px" style="border:0px;"></iframe>
-			</div>
-
-			<div class="container-geogebra-applet-desk" style="padding-bottom: 85%; margin: 0rem;">
-				<iframe scrolling="no" title="Massa-Mola-Amort-CelSimplesV4" src="https://www.geogebra.org/material/iframe/id/z7ugj4gk/width/742/height/629/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="742px" height="629px" style="border:0px;"></iframe>
-			</div>
-
-			<div class="container-geogebra-applet-wide" style="padding-bottom: 49%; margin: 0rem;">
-				<iframe scrolling="no" title="Massa-Mola-Amortecedor-Desktop-Versao4" src="https://www.geogebra.org/material/iframe/id/jbej9k4k/width/1466/height/706/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1466px" height="706px" style="border:0px;"> </iframe>
-			</div>
-
-			<!-- <div class="container-geogebra-applet-desk2">
-
-				<iframe scrolling="no" title="Massa-Mola-Amortecedor-Desktop-Versao4" src="https://www.geogebra.org/material/iframe/id/jbej9k4k/width/1466/height/706/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1466px" height="706px" style="border:0px;"> </iframe>
+			<div class="container-geogebra-applet">
+				<div class="container-geogebra-applet-erro">
+					<span class="revisar">
+						<p>Erro: É necessário uma tela maior para exibir o Applet</p>
+					</span>
+				</div>
+				<div class="container-geogebra-applet-cel" style="padding-bottom: 150%; margin: 0rem;">
+					<iframe scrolling="no" title="RedtMat Soma-Seno-Cosseno cel3" src="https://www.geogebra.org/material/iframe/id/t3txs8bz/width/387/height/565/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/true/rc/false/ld/false/sdz/true/ctl/false" width="387px" height="565px" style="border:0px;"> </iframe>
+				</div>
 				
-			</div> -->
+				
+				<div class="container-geogebra-applet-desk" style="padding-bottom: 90%; margin: 0rem;">
+					<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
+				</div>
+				<div class="container-geogebra-applet-wide" style="padding-bottom: 65%; margin: 0rem;">
+					<iframe scrolling="no" title="Soma-Seno-Cosseno" src="https://www.geogebra.org/material/iframe/id/vfpuphcq/width/776/height/698/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="776px" height="698px" style="border:0px;"> </iframe>
+				</div>
+			</div>
+			
 
 
-		</div>
+			<div class="revisar"><h2>REESCREVER DAQUI EM DIANTE E MELHORAR RESPONSIVIDADE DO APPLET</h2></div>
+		</section>
+		
+		
+		<section>
+			<h2>Demonstração Matemática da Equivalência das Soluções</h2>
 
-		<h2>Exercício:</h2>
+			<p>Para transformar</p>
 
-		<p>Muitas vezes observamos o comportamento de um determinado sistema e desejamos descrevê-lo matematicamente.</p>
 
-        <!-- COLOCAR O CONTEÚDO AQUI -->
+			<div style="text-align: center;">
+				<span class="mat-em-bloco" style="color: rgb(130, 0, 30);">
+					<span>
+						\(
+						x(t) = e^{-γt/2} \cdot
+						\)
+					</span>
+					<span>
+						\(
+						[C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)]
+						\)
+					</span>
+				</span>
+			</div>
 
+
+
+
+
+
+
+
+
+			<p style="text-indent: 0;">em</p>
+			
+			<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
+			\[
+			x(t) = A \cdot e^{-\frac{\gamma t}{2}} \cdot \cos(\omega_d \cdot t + \phi)
+			\]</span>
+
+			<p style="text-indent: 0;">vamos começar isolando termos que são idênticos nas duas equações:</p>
+
+
+			<div style="text-align: center;">
+				<span class="mat-em-bloco" style="color: rgb(130, 0, 30);">
+					<span>
+						\(
+						\frac{x(t)} {e^{-γt/2}}  =  
+						\)
+					</span>
+					<span>
+						\(
+						C_1 \cdot cos(ω_d \cdot t) + C_2 \cdot sin(ω_d \cdot t)
+						\)
+					</span>
+				</span>
+			</div> 
+
+
+		
+			<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
+			\[
+			\frac{x(t)} {e^{-γt/2}}  = A \cdot \cos(\omega_d \cdot t + \phi)
+			\]</span>
+
+			<p>Vamos manter o foco na segunda equação. Como cosseno é uma função cíclica, e se repete a cada <span class="mat-em-linha">\(2 \pi\)</span>, sabemos que:</p>
+			
+			<div style="text-align: center;">
+				<span class="mat-em-bloco">
+					<span>
+						\(
+						\cos(a + b) = \cos(a + b - 2\pi)
+						\)
+					</span>
+					<span>
+						\(
+						= \cos(a - (2\pi -b))
+						\)
+					</span>
+				</span>
+			</div>
+
+
+			<p>Portanto:</p>
+
+			<div style="text-align: center;">
+				<span class="mat-em-bloco" style="color: rgb(0, 0, 180);">
+					<span>
+						\(
+						\frac{x(t)} {e^{-γt/2}}  =
+						\)
+					</span>
+					<span>
+						\(
+						A \cdot \cos(\omega_d \cdot t - (2\pi - \phi))
+						\)
+					</span>
+				</span>
+			</div>
+
+		
+
+			<p>Agora vamos aplicar a identidade trigonométrica no termo da direita equação:</p>
+
+			<div style="text-align: center;">
+				<span class="mat-em-bloco-mult" style="color: rgb(0, 0, 180);">
+					<span>
+						\(
+						\frac{x(t)} {e^{-γt/2}} = 
+						\)
+					</span>
+					<span>
+						\(
+						A \cdot [\cos(\omega_d \cdot t)\cos(2 \pi - \phi) +
+						\)
+					</span>
+					<span style="color: rgb(0,0,180)">
+						\(
+							\sin(\omega_d \cdot t)\sin(2 \pi - \phi) ]
+						\)
+					</span>
+				</span>
+			</div>
+
+			<p>Aplicando a distributiva e rearranjando, temos:</p>
+
+			<div style="text-align: center;">
+				<span class="mat-em-bloco-mult" style="color: rgb(0, 0, 180);">
+					\(
+					\frac{x(t)} {e^{-γt/2}}  = \)<span style="color: rgb(0, 135, 90);">\([A \cos(2 \pi - \phi)]\)</span>\(\cdot\cos(\omega_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\([A \sin(2 \pi - \phi)]\)</span>\( \cdot\sin(\omega_d \cdot t)
+					\)
+				</span>
+				<span class="mat-em-bloco-mult" style="color: rgb(130, 0, 30);">
+					\(
+					\frac{x(t)} {e^{-γt/2}}  =  \)<span style="color: rgb(0, 135, 90);">\(C_1\)</span>\( \cdot cos(ω_d \cdot t) + \)<span style="color: rgb(0, 135, 90);">\(C_2\)</span>\( \cdot sin(ω_d \cdot t)
+					\)
+				</span>
+			</div>
+
+
+			<p>Uma vez que <span class="mat-em-linha">\(\sin(2 \pi - \phi)\)</span> e <span class="mat-em-linha">\(\cos(2 \pi - \phi)\)</span> são constantes, podems comparar as duas expressões, e para que elas sejam iguais, precisamos descobrir os valores de <span class="mat-em-linha">\(A\)</span> e <span class="mat-em-linha">\(\phi\)</span> tal que:</p>
+
+			<span class="mat-em-bloco">
+			\[
+			C_1 = A \cos(2 \pi - \phi)
+			\]</span>
+
+			<span class="mat-em-bloco">\[
+			C_2 = A \sin(2 \pi - \phi)
+			\]</span>
+
+			<p>Temos um sistema não linear de duas equações que pode ser facilmente resolvido dividindo a segunda equação pela primeira, assim poderemos escrever <span class="mat-em-linha">\(\phi\)</span> em função de <span class="mat-em-linha">\(C_1\)</span> e <span class="mat-em-linha">\(C_2\)</span>
+
+			<span class="mat-em-bloco">\[
+			\frac{C_2}{C_1} = \tan(2 \pi - \phi)
+			\]</span>
+			<span class="mat-em-bloco">\[
+			\phi = 2\pi - \arctan(\frac{C_2}{C_1})
+			\]</span>
+
+			<p>Escolhendo a primeira das equações anteriores para substituir o valor de <span class="mat-em-linha">\(\phi\)</span> temos:</p>
+
+			<span class="mat-em-bloco">\[
+			A = \frac{C_1}{\cos(2\pi - (2\pi - \arctan(\frac{C_2}{C_1})))}
+			\]</span>
+			<span class="mat-em-bloco">\[
+			A = \frac{C_1}{\cos(\arctan(\frac{C_2}{C_1}))}
+			\]</span>
+
+			<p>Uma vez que as constantes são definidas pelas condições de contorno, matematicamente não importa a maneira como vamos escrever nossa solução, mas a solução onde aparece apenas um termo trigonométrico apresenta um significado fisico mais palpável para as constantes.</p>
+
+		</section>
+
+		<section>
+			<h2>Applet para Sistema Sub-Amortecido</h2>
+
+			<p>Com o applet abaixo é possível verificar como cada variável (com sentido físico) influencia na função que descreve a posição do centro de massa do objeto ao longo do tempo.</p>
+			<p>A solução da EDO nos permite descrever com eficiência diversos problemas físicos.</p>
+
+			<div class="container-geogebra-applet">
+				<div class="container-geogebra-applet-erro">
+					<span class="revisar">
+						<p>Erro: É necessário uma tela maior para exibir o Applet</p>
+					</span>
+				</div>
+				<div class="container-geogebra-applet-cel" style="padding-bottom: 85%; margin: 0rem;">
+					<iframe scrolling="no" title="Massa-Mola-Amort-CelSimplesV4" src="https://www.geogebra.org/material/iframe/id/z7ugj4gk/width/742/height/629/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="742px" height="629px" style="border:0px;"></iframe>
+				</div>
+
+				<div class="container-geogebra-applet-desk" style="padding-bottom: 85%; margin: 0rem;">
+					<iframe scrolling="no" title="Massa-Mola-Amort-CelSimplesV4" src="https://www.geogebra.org/material/iframe/id/z7ugj4gk/width/742/height/629/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="742px" height="629px" style="border:0px;"></iframe>
+				</div>
+
+				<div class="container-geogebra-applet-wide" style="padding-bottom: 49%; margin: 0rem;">
+					<iframe scrolling="no" title="Massa-Mola-Amortecedor-Desktop-Versao4" src="https://www.geogebra.org/material/iframe/id/jbej9k4k/width/1466/height/706/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1466px" height="706px" style="border:0px;"> </iframe>
+				</div>
+
+				<!-- <div class="container-geogebra-applet-desk2">
+
+					<iframe scrolling="no" title="Massa-Mola-Amortecedor-Desktop-Versao4" src="https://www.geogebra.org/material/iframe/id/jbej9k4k/width/1466/height/706/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false" width="1466px" height="706px" style="border:0px;"> </iframe>
+					
+				</div> -->
+
+
+			</div>
+		</section>
+
+		<section>
+
+			<h2>Exercício:</h2>
+
+			<p>Muitas vezes observamos o comportamento de um determinado sistema e desejamos descrevê-lo matematicamente.</p>
+
+			<!-- COLOCAR O CONTEÚDO AQUI -->
+		</section>
+	
 	</div>
 	<div class="footer-nv3"></div> 
 </body>
