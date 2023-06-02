@@ -124,7 +124,7 @@ strong{
 @media (max-width: 500px) {
 
     p {
-        text-align: left;
+        /* text-align: left; */
     }
     .container-img {
         display: flex;
