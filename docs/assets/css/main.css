@@ -76,7 +76,7 @@ strong{
 
 .container-principal {
     flex-grow: 1;
-    margin: 2rem 7.5vw;
+    margin: 2rem 5vw;
     padding: 1rem; /* se não colocar um padding, o MathJax buga a responsividade de formulas em linha. */
 }
 
@@ -121,7 +121,7 @@ strong{
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 450px) {
 
     p {
         /* text-align: left; */
@@ -129,6 +129,14 @@ strong{
     .container-img {
         display: flex;
         justify-content: center;
+        background-color: red;
+        padding: 1%;
+    }
+    .container-img img {
+        max-width: 100%;
+        width: 90%;
+
+
     }
     .container-principal .img-direita {
         float: none;
