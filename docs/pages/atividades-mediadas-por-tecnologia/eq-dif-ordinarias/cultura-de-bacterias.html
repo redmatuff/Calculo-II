@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cálculo 2 IME-UFF</title>
+	<link rel="stylesheet" href="../../../assets/css/reset.css">
+	<link rel="stylesheet" href="../../../assets/css/main.css">
+	<link rel="stylesheet" href="../../../assets/css/header.css">
+	<link rel="stylesheet" href="../../../assets/css/titulos.css">
+	<link rel="stylesheet" href="../../../assets/css/footer.css">
+	<link rel="stylesheet" href="../../../assets/css/responsiv-applets.css">
+    <!-- COLOCAR A ESTILIZAÇÃO ESPECÍFICA DA PÁGINA AQUI -->
+</head>
+<body>
+	<div class="header"></div>
+	<div class="container-titulos-nv3"></div>
+	<div class="container-principal">
+        <!-- COLOCAR O CONTEÚDO AQUI -->
+		<h1>Cultura de Bactérias</h1>
+		<h2>Modelagem e Solução de Ambiente sem Fatores Limitantes</h2>
+		<div class="revisar">
+			<p>Esta parte do texto é MUITO SEMELHANTE ao decaimento radioativo.</p>
+		</div>
+		<p>As culturas de bactérias são essenciais na microbiologia, permitindo o estudo detalhado das características bacterianas. Elas desempenham um papel fundamental no diagnóstico de doenças, na pesquisa científica e no controle de qualidade. Ao fornecer um ambiente controlado, as culturas bacterianas possibilitam a observação do crescimento, reprodução e metabolismo das bactérias. Além disso, elas são utilizadas para testar a eficácia de tratamentos antimicrobianos e identificar possíveis agentes patogênicos.</p>
+
+		<p>Para descrever o crescimento populacional de bactérias podemos usar uma equação diferencial ordinária (EDO) para modelar esse processo.</p>
+
+		<p>Vamos chamar de <span class="mat-em-linha">\(N(t)\)</span> a quantidade de bactérias no instante <span  class="mat-em-linha">\(t\)</span>. Sabemos que a taxa de crescimento das bactérias é proporcional à quantidade atual de bactérias. Portanto, podemos escrever a seguinte EDO:</p>
+		
+		<div style="text-align: center;">
+			<span class="mat-em-bloco">
+				\(
+				\frac{{dN}}{{dt}} = k \cdot N_{(t)}
+				\)
+			</span>
+		</div>
+
+		<p style="text-indent: 0;">onde <span class="mat-em-linha">\(\frac{{dN}}{{dt}}\)</span> é a taxa de variação do número de bactérias em relação ao tempo, <span class="mat-em-linha">\(k\)</span> é a constante de crescimento e <span class="mat-em-linha">\(N\)</span> é a quantidade de bactérias.</p>
+
+
+
+
+
+
+
+
+
+		<p>Para resolver esta equação diferencial, começamos separando as variáveis, ou seja, movendo <span class="mat-em-linha">\(\frac{{dN}}{{dt}}\)</span> para um lado da equação e \(dt\) para o outro lado:</p>
+		<div style="text-align: center;">
+  			<span class="mat-em-bloco">
+				\(
+				\frac{{dN}}{{N_{(t)}}} = k \cdot dt
+				\)
+			</span>
+		</div>
+		<p>Em seguida, integramos ambos os lados da equação. A integral do lado esquerdo é o logaritmo natural de \(N_{(t)}\) e a integral do lado direito é \(k \cdot t + C\), onde \(C\) é uma constante de integração. Portanto, obtemos a seguinte equação:</p>
+		<div style="text-align: center;">
+  			<span class="mat-em-bloco">
+				\(
+				\ln(N_{(t)}) = k \cdot t + C
+				\)
+			</span>
+		</div>
+	
+
+
+
+		<p>Supondo que conhecemos a quantidade inicial de bactérias, chamamos de condição inicial a fórmula <span>\(N_{(t=0)} = N_0\)</span>, temos então:</p>
+
+
+		<div style="text-align: center;">
+			<span class="mat-em-bloco">
+				\(
+				\ln(N_0) = C
+				\)
+			</span>
+		</div>
+
+		<p>Portanto, podemos reescrever a solução da EDO como:</p>
+
+
+
+		<div style="text-align: center;">
+			<span class="mat-em-bloco">
+				\(
+				\ln(N) = k \cdot t + \ln(N_0)
+				\)
+			</span>
+		</div>
+
+
+		<p>Exponenciando ambos os lados, obtemos:</p>
+
+
+		<div style="text-align: center;">
+			<span class="mat-em-bloco">
+				\(
+				N_{(t)} = N_0 \cdot e^{-k \cdot t}
+				\)
+			</span>
+		</div>
+
+
+		<p>Essa equação descreve o crescimento exponencial das bactérias ao longo do tempo, em que a taxa de crescimento é dada pela constante <span class="mat-em-linha">\(k\)</span>.</p>
+		
+		<!-- <p>No caso em que as bactérias dobram de tamanho a cada 12 minutos, podemos determinar o valor de <span class="mat-em-linha">\(k\)</span> usando a informação de que <span class="mat-em-linha">\(N(12) = 2 \cdot N(0)\)</span>.</p> -->
+
+		<h2>Modelagem de Ambiente com Fatores Limitantes</h2>
+
+		<p>
+			A análise anterior não previa que o número de bacterias não pode aumentar indefinidamente, uma vez que a competição por recursos e espaço se tornará um fator relevante a medida que o número de bactérias aumenta. Então nesna nova análide, iremos adicionar esta condição.
+		</p>
+		<p>
+			Vamos supor que você queira modelar o crescimento da população de bactérias em uma cultura em que a taxa de crescimento é limitada pela disponibilidade de espaço. Você pode usar a equação logística, que é uma EDO de primeira ordem amplamente utilizada para modelar o crescimento populacional limitado.
+		</p>
+		<p>
+			A equação logística é dada por:
+		</p>
+
+		dy/dt = r * y * (1 - y/K)
+
+		<p>
+			Onde:
+		</p>
+		<ul>
+			<li>dy/dt é a taxa de crescimento da população de bactérias em relação ao tempo t.</li>
+			<li>r é a taxa de crescimento intrínseca da população.</li>
+			<li>y é o número de indivíduos na população em um determinado momento.</li>
+			<li>K é a capacidade de suporte, que representa o tamanho máximo da população que o ambiente pode sustentar.</li>
+		</ul>
+
+		<p>
+			Na equação logística, a parte (1 - y/K) representa a limitação do crescimento populacional devido à competição por recursos, como espaço limitado. Quando a população y se aproxima de K, o fator (1 - y/K) se aproxima de zero, reduzindo a taxa de crescimento.
+		</p>
+		<p>
+			A equação logística que foi apresentada, dy/dt = r * y * (1 - y/K), é uma Equação Diferencial Ordinária Não Linear. A natureza não linear dessa equação dificulta a obtenção de uma solução analítica exata.
+		</p>
+		<p>
+			Uma equação diferencial é chamada de linear se todas as suas derivadas aparecem apenas linearmente. Isso significa que as variáveis ​​e suas derivadas têm expoentes 1 (ou zero). Por exemplo, a equação diferencial linear mais simples é dy/dt = a * y, onde "a" é uma constante.
+			No entanto, no caso da equação logística, a presença do termo (1 - y/K) torna a equação não linear. Esse termo não possui uma dependência linear com "y" e leva a uma equação não linear.
+		</p>
+		<p>
+			Resolver analiticamente uma EDO não linear é geralmente muito mais complexo do que resolver uma EDO linear. Na maioria dos casos, não existem métodos gerais para obter uma solução exata para equações diferenciais não lineares.
+			Portanto, na prática, recorremos a métodos numéricos para obter soluções aproximadas ou utilizar técnicas de análise qualitativa para entender o comportamento geral da solução.
+		</p>
+		<p>
+			Em resumo, a equação logística apresentada é não linear, o que torna a obtenção de uma solução analítica exata impraticável na maioria dos casos.
+		</p>
+
+
+
+		<h2>Atividade</h2>
+
+		<div class="revisar">
+			<p>Discutir com orientador como seria uma atividade para demonstrar a dificuldade de se resolver alguns tipos de EDOs analiticamente.</p>
+		</div>
+
+		
+	</div>
+	<div class="footer-nv3"></div> 
+</body>
+<!-- COLOCAR SCRIPTS ESPECÍFICOS AQUI -->
+<script src="../../../assets/js/insere-header.js"></script>
+<script src="../../../assets/js/insere-titulos.js"></script>
+<script src="../../../assets/js/insere-footer.js"></script>
+<script src="../../../assets/js/renderiza-formulas.js"></script>
+</html>

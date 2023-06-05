@@ -29,18 +29,19 @@ body {
 }
 
 h1 {
-    font-size: 1.7rem;
+    font-size: 2rem;
     margin: 2rem 0 1.5rem 0;
     line-height: 2.5rem;
 }
 h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin: 2rem 0 1.5rem 0;
 }
 h3 {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     margin: 3rem 0 1rem 0;
+    text-decoration: underline;
 }
 h4 {
     font-size: 1rem;
@@ -82,6 +83,14 @@ strong{
 
 .container-principal p {
     text-indent: 3rem;
+}
+
+.container-img-centro {
+    display: flex;
+    justify-content: center;
+}
+.container-img-centro img {
+    max-width: 100%;
 }
 
 .container-principal .img-direita{

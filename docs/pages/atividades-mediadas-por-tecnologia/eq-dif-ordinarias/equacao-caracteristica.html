@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cálculo 2 IME-UFF</title>
+	<link rel="stylesheet" href="../../../assets/css/reset.css">
+	<link rel="stylesheet" href="../../../assets/css/main.css">
+	<link rel="stylesheet" href="../../../assets/css/header.css">
+	<link rel="stylesheet" href="../../../assets/css/titulos.css">
+	<link rel="stylesheet" href="../../../assets/css/footer.css">
+	<link rel="stylesheet" href="../../../assets/css/responsiv-applets.css">
+    <!-- COLOCAR A ESTILIZAÇÃO ESPECÍFICA DA PÁGINA AQUI -->
+</head>
+<body>
+	<div class="header"></div>
+	<div class="container-titulos-nv3"></div>
+	<div class="container-principal">
+        <!-- COLOCAR O CONTEÚDO AQUI -->
+		<h1>Determinando a Equação Característica</h1>
+		<h2>Introdução</h2>
+		<p>
+			A escolha da equação característica é comumente utilizada ao resolver equações diferenciais lineares de segunda ordem com coeficientes constantes. Este método transforma a equação diferencial em uma equação algébrica, que é geralmente mais fácil de resolver. Porém, só é aplicável a tipos específicos de EDOs
+		</p>
+		<p>
+			A forma geral de uma Equação Diferencial Linear de Segunda Ordem Homogênea com Coeficientes Constantes é:
+		</p>
+		ay'' + by' + c*y = 0
+		<p>
+			onde y'' é a segunda derivada de y, y' é a primeira derivada, e a, b, e c são constantes.
+		</p>
+		<p>
+			A equação característica associada a essa equação diferencial é:
+		</p>
+		ar^2 + br + c = 0
+		<p>
+			onde r são as raízes da equação.
+		</p>
+		<p>
+			A solução geral da equação diferencial será determinada pelas raízes r desta equação característica.
+		</p>
+		<ul>
+			<li>
+				Se as raízes r1 e r2 são reais e distintas, a solução geral será y = C1e^(r1x) + C2e^(r2x).
+			</li>
+			<li>
+				Se as raízes são reais e iguais (r1 = r2 = r), a solução geral será y = (C1 + C2*x)e^(rx).
+			</li>
+			<li>
+				Se as raízes são complexas (r = α ± βi), a solução geral será y = e^(αx)(C1cos(βx) + C2sin(βx)).
+			</li>
+		</ul>
+		<p>
+			Nessas soluções, C1 e C2 são constantes que podem ser determinadas por condições iniciais ou condições de contorno.	
+		</p>
+
+		
+		
+		<h2>Atividade</h2>
+
+		<div class="revisar">
+			<p>
+				Discutir uma atividade com o orientador. 
+			</p>
+		</div>
+
+
+	</div>
+	<div class="footer-nv3"></div> 
+</body>
+<!-- COLOCAR SCRIPTS ESPECÍFICOS AQUI -->
+<script src="../../../assets/js/insere-header.js"></script>
+<script src="../../../assets/js/insere-titulos.js"></script>
+<script src="../../../assets/js/insere-footer.js"></script>
+<script src="../../../assets/js/renderiza-formulas.js"></script>
+</html>

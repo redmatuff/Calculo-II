@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cálculo 2 IME-UFF</title>
+	<link rel="stylesheet" href="../../../assets/css/reset.css">
+	<link rel="stylesheet" href="../../../assets/css/main.css">
+	<link rel="stylesheet" href="../../../assets/css/header.css">
+	<link rel="stylesheet" href="../../../assets/css/titulos.css">
+	<link rel="stylesheet" href="../../../assets/css/footer.css">
+	<link rel="stylesheet" href="../../../assets/css/responsiv-applets.css">
+    <!-- COLOCAR A ESTILIZAÇÃO ESPECÍFICA DA PÁGINA AQUI -->
+</head>
+<body>
+	<div class="header"></div>
+	<div class="container-titulos-nv3"></div>
+	<div class="container-principal">
+        <!-- COLOCAR O CONTEÚDO AQUI -->
+		<h1>Decaimento Radioativo</h1>
+		<h2>Modelagem e Solução</h2>
+		<p>
+			As equações diferenciais ordinárias são amplamente utilizadas na modelagem do decaimento radioativo. O decaimento radioativo é um processo no qual uma substância radioativa se transforma em outra substância estável ao longo do tempo, emitindo radiação no processo.
+		</p>
+
+		<p>
+			Suponha que <span class="mat-em-linha">\( N_{(t)} \)</span> seja a quantidade de material radioativo no instante <span class="mat-em-linha">\( t \)</span>. A taxa de variação da quantidade de material radioativo é proporcional à quantidade atual de material. Essa relação pode ser descrita pela seguinte EDO:
+		</p>
+
+		<div style="text-align: center;">
+			<span class="mat-em-bloco">
+				\(
+				\frac{{dN}}{{dt}} = -k \cdot N
+				\)
+			</span>
+		</div>
+
+		
+		<p style="text-indent: 0;">
+			onde <span class="mat-em-linha">\( \frac{{dN}}{{dt}} \)</span> é a taxa de variação da quantidade de material em relação ao tempo, <span class="mat-em-linha">\( k \)</span> é a constante de decaimento e <span class="mat-em-linha">\( N \)</span> é a quantidade de material radioativo. É importante ressaltar que, por ser um decaimento, a taxa de variação assume valor negativo, e isso explica o sinal adicionado antes da constante.
+		</p>
+
+
+		<p>Para resolver esta equação diferencial, começamos separando as variáveis, ou seja, movendo <span class="mat-em-linha">\(\frac{{dN}}{{dt}}\)</span> para um lado da equação e \(dt\) para o outro lado:</p>
+		<div style="text-align: center;">
+  			<span class="mat-em-bloco">
+				\(
+				\frac{{dN}}{{N_{(t)}}} = k \cdot dt
+				\)
+			</span>
+		</div>
+		<p>Em seguida, integramos ambos os lados da equação. A integral do lado esquerdo é o logaritmo natural de \(N_{(t)}\) e a integral do lado direito é \(k \cdot t + C\), onde \(C\) é uma constante de integração. Portanto, obtemos a seguinte equação:</p>
+		<div style="text-align: center;">
+  			<span class="mat-em-bloco">
+				\(
+				\ln(N_{(t)}) = k \cdot t + C
+				\)
+			</span>
+		</div>
+
+		
+
+		<p>Supondo que conhecemos a quantidade inicial de material radioativo, chamamos de condição inicial a fórmula <span>\(N_{(t=0)} = N_0\)</span>, temos então:</p>
+
+
+		<div style="text-align: center;">
+			<span class="mat-em-bloco">
+				\(
+				\ln(N_0) = C
+				\)
+			</span>
+		</div>
+
+		<p>Portanto, podemos reescrever a solução da EDO como:</p>
+
+
+
+		<div style="text-align: center;">
+			<span class="mat-em-bloco">
+				\(
+				\ln(N) = k \cdot t + \ln(N_0)
+				\)
+			</span>
+		</div>
+
+
+		<p>Exponenciando ambos os lados obtemos a solução geral dessa EDO:</p>
+
+		<div style="text-align: center;">
+			<span class="mat-em-bloco">
+				\(
+				N_{(t)} = N_0 \cdot e^{-k \cdot t}
+				\)
+			</span>
+		</div>
+
+		<p style="text-indent: 0;">
+			onde <span class="mat-em-linha">\( e \)</span> é a base do logaritmo natural e <span class="mat-em-linha">\( N_0 \)</span> é a quantidade inicial de material radioativo (no instante <span class="mat-em-linha">\( t = 0 \)</span>).
+		</p>
+		<p>
+			Essa equação é conhecida com Equação da Lei de Decaimento, e descreve como a quantidade de material radioativo diminui ao longo do tempo. A constante de decaimento <span class="mat-em-linha">\( k \)</span> é específica para cada substância radioativa e é determinada experimentalmente.
+		</p>
+		<p>
+			Com base nessa equação, é possível realizar várias análises, como determinar a taxa de decaimento <span class="mat-em-linha">\( k \)</span> a partir de dados experimentais, estimar o tempo necessário para que uma determinada quantidade de material se degrade, ou determinar a quantidade de material radioativo em um momento futuro.
+		</p>
+		<p>
+			É importante lembrar que a modelagem do decaimento radioativo assume que não há interferências externas no processo de decaimento, como a introdução de novas quantidades do material radioativo ou reações químicas adicionais. Caso haja fatores externos envolvidos, modelos mais complexos podem ser necessários para descrever o sistema.
+		</p>
+
+		<h2>Atividade</h2>
+		<p>
+			O carbono 14 é um isótopo radioativo do carbono que ocorre naturalmente na atmosfera. Os seres vivos absorvem carbono 14 durante suas vidas por meio da respiração e da alimentação. No entanto, quando um organismo morre, a taxa de absorção de carbono 14 cessa, e a quantidade desse isótopo nele começa a diminuir ao longo do tempo devido ao seu decaimento radioativo.
+		</p>
+		<p>
+			O carbono 14 sofre um decaimento radioativo em carbono 12 estável por meio de um processo conhecido como meia-vida. A meia-vida do carbono 14 é de aproximadamente 5730 anos, o que significa que, após esse período, metade do carbono 14 inicialmente presente em um organismo terá se degradado em carbono 12.
+		</p>
+		<p>
+			Ao medir a quantidade remanescente de carbono 14 em uma amostra, é possível estimar o tempo decorrido desde a morte do organismo. Isso é feito comparando-se a proporção de carbono 14 em relação ao carbono 12 na amostra com a proporção encontrada em organismos vivos.
+		</p>
+		<p>
+			A relação entre a quantidade de carbono 14 remanescente e o tempo decorrido segue uma curva exponencial de decaimento radioativo, que pode ser modelada pela Equação da Lei de Decaimento mencionada anteriormente. A partir dessa curva, é possível determinar a idade aproximada da amostra.
+		</p>
+		<p>
+			Portanto, o decaimento radioativo do carbono 14 é fundamental para a datação por carbono 14, e a medição da quantidade de carbono 14 remanescente em uma amostra é o que permite estimar sua idade.
+		</p>
+
+		<div class="revisar">
+			<p>Colocar aqui a atividade após discutir com orientador(a) </p>
+		</div>
+
+	</div>
+	<div class="footer-nv3"></div> 
+</body>
+<!-- COLOCAR SCRIPTS ESPECÍFICOS AQUI -->
+<script src="../../../assets/js/insere-header.js"></script>
+<script src="../../../assets/js/insere-titulos.js"></script>
+<script src="../../../assets/js/insere-footer.js"></script>
+<script src="../../../assets/js/renderiza-formulas.js"></script>
+</html>
