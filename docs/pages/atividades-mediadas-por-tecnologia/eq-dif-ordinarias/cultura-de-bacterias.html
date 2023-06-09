@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="../../../assets/css/titulos.css">
 	<link rel="stylesheet" href="../../../assets/css/footer.css">
 	<link rel="stylesheet" href="../../../assets/css/responsiv-applets.css">
-    <!-- COLOCAR A ESTILIZAÇÃO ESPECÍFICA DA PÁGINA AQUI -->
+	<link rel="stylesheet" href="../../../assets/css/game1.css">
 </head>
 <body>
 	<div class="header"></div>
@@ -97,7 +97,7 @@
 		<div style="text-align: center;">
 			<span class="mat-em-bloco">
 				\(
-				N_{(t)} = N_0 \cdot e^{-k \cdot t}
+				N_{(t)} = N_0 \cdot e^{k \cdot t}
 				\)
 			</span>
 		</div>
@@ -105,8 +105,6 @@
 
 		<p>Essa equação descreve o crescimento exponencial das bactérias ao longo do tempo, em que a taxa de crescimento é dada pela constante <span class="mat-em-linha">\(k\)</span>.</p>
 		
-		<!-- <p>No caso em que as bactérias dobram de tamanho a cada 12 minutos, podemos determinar o valor de <span class="mat-em-linha">\(k\)</span> usando a informação de que <span class="mat-em-linha">\(N(12) = 2 \cdot N(0)\)</span>.</p> -->
-
 		<h2>Modelagem de Ambiente com Fatores Limitantes</h2>
 
 		<p>
@@ -155,10 +153,153 @@
 
 		<div class="revisar">
 			<p>Discutir com orientador como seria uma atividade para demonstrar a dificuldade de se resolver alguns tipos de EDOs analiticamente.</p>
+			<p>
+				Ou montar um simulador de cultura de bacterias onde a unica limitação é o espaço e estimar em quanto tempo o espaço acaba.
+			</p>
+		</div>
+		<h3>SIMULADOR</h3>
+
+		<p>
+			O simulador abaixo permite ter uma ideia da evolução do número de bactérias quando a única restrição para o seu crescimento é o espaço que a colônia irá ocupar. Tente modelar uma EDO para o problema, então adote uma configuração para o espaço disponível, a quantidade inicial de bactérias e a taxa de crescimento (o quanto elas se multiplicam a cada hora). Verifique se seu modelo é capaz de prever o tempo necessário para que as bactérias ocupem todo o espaço disponível.
+		</p>
+
+		<div class="container-game">
+			<div class="tela">
+			</div>
+			<div class="menu">
+				
+				<div class="menu-sec1">
+					<div class="div-bar">
+						<span>Col: </span>
+						<input type="range" min="6" max="25" step="1" class="input-bar" value = 10 id="num-col-bar">
+						<input type="text" class="input-text" id="num-col-value" readonly>
+					</div>
+					<div class="div-bar">
+						<span>Lin: </span>
+						<input type="range" min="6" max="25" step="1" class="input-bar" value = 10 id="num-lin-bar">
+						<input type="text" class="input-text" id="num-lin-value" readonly>
+					</div>
+					<div class="div-bar">
+						<span>Inic: </span>
+						<input type="range" min="1" max="30" step="1" class="input-bar" value="1" id="num-bac-inic-bar">
+						<input type="text" class="input-text" id="num-bac-inic-value" readonly>
+					</div>
+					<div class="div-bar">
+						<span>Taxa: </span>
+						<input type="range" min="1.4" max="5" step="0.05" class="input-bar" value="2" id="tx-cresc-bar">
+						<input type="text" class="input-text" id="tx-cresc-value" readonly>
+						<span class="unid">\( / h\)</span>
+					</div>
+				</div>
+				
+				<div class="menu-sec2">
+					<div class="div-linha-tempo">
+						<span>Tempo: </span>
+						<input type="range" min="0" max="20" step="0.01" value = 0 class="input-bar" id="linha-tempo" disabled>
+						<input type="text" class="input-text" id="tempo-value" readonly>
+						<span>\(h\)</span>
+					</div>
+					<div class="container-resp-sol">
+						<div class="div-resp">
+							<input type="number" inputmode="numeric" readonly id="txt-sol">
+							<span>Solução</span>
+						</div>
+						<div class="div-resp">
+							<input type="number" inputmode="numeric" id="resp-aluno">
+							<button id="btn-resp">Responder</button>
+						</div>
+
+					</div>
+					<div class="container-msg">
+						<span id="msg">Com que precisão você consegue prever o tempo para que não caiba mais bactérias?</span>
+					</div>
+					
+				<div>
+
+				</div>
+
+				</div>
+			</div>
 		</div>
 
+		<div class="container-exercicios">
+			<h3>Exercícios:</h3>
+
+			<p class="questao">
+				<strong>QUESTÃO 01: </strong>Qual a equação que descreve o número de bactérias em função das variáveis apresentadas no simulador?
+			</p>
+			<div class="alternativa">
+				<input type="radio" name="q1" id="q1a1">
+				<label for="q1a1">\( Inic \cdot (Col \cdot Lin) \cdot e^{ln(Taxa) \cdot Tempo} \)</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q1" id="q1a2">
+				<label for="q1a2">\( Inic \cdot e^{ln(Taxa) \cdot Tempo} \) *** </label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q1" id="q1a3">
+				<label for="q1a3">\( Inic \cdot (Col \cdot Lin) \cdot e^{Taxa \cdot Tempo} \)</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q1" id="q1a4">
+				<label for="q1a4">\( Inic \cdot e^{Taxa \cdot Tempo} \)</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q1" id="q1a5">
+				<label for="q1a5">\( Inic \cdot Taxa \cdot e^{Tempo} \)</label>
+			</div>
+
+			<p class="questao">
+				<strong>QUESTÃO 02: </strong>Se o número de bacterias é \(1,5\) vezes maior a cada segundo, quando tempo elas levam para dobrar de quantidade?
+			</p>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a1">
+				<label for="q2a1">\( 1,70949 \)</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a2">
+				<label for="q2a2">\( 1,70951\)***</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a3">
+				<label for="q2a3">\( 1,70953 \)</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a4">
+				<label for="q2a4">\( 1,70955 \)</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a5">
+				<label for="q2a5">\( 1,70957 \)</label>
+			</div>
+
+			<p class="questao">
+				<strong>QUESTÃO 03: </strong>Indique o conjunto de valores que não deve ser usados no simulador para testar a questão anterior.
+			</p>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a1">
+				<label for="q2a1">\( 6; 6; 18; 1.5; \)</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a2">
+				<label for="q2a2">\( 6; 7; 21; 1.5;\)</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a3">
+				<label for="q2a3">\( 7; 7; 24; 1.5; \) ***</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a4">
+				<label for="q2a4">\( 7; 8; 28; 1.5; \)</label>
+			</div>
+			<div class="alternativa">
+				<input type="radio" name="q2" id="q2a5">
+				<label for="q2a5">\( 6; 9; 27; 1.5; \)</label>
+			</div>
+		</div>
 		
 	</div>
+
 	<div class="footer-nv3"></div> 
 </body>
 <!-- COLOCAR SCRIPTS ESPECÍFICOS AQUI -->
@@ -166,4 +307,5 @@
 <script src="../../../assets/js/insere-titulos.js"></script>
 <script src="../../../assets/js/insere-footer.js"></script>
 <script src="../../../assets/js/renderiza-formulas.js"></script>
+<script src="../../../assets/js/js-games/bact.js"></script>
 </html>

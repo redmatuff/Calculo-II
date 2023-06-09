@@ -140,6 +140,17 @@ strong{
 
 }
 
+.container-principal .questao {
+    margin: 3rem 0 1rem 0;
+    text-indent: 0rem;
+}
+
+.alternativa {
+    margin: 0.5rem 0;
+}
+
+.alternativa {
+}
 
 @media (max-width: 450px) {
 
@@ -168,94 +179,3 @@ strong{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
-/* APARECE UMA MARGEM ABAIXO DESTA DIV PARA TELAS MUITO GRANDES EM RELAÇÃO AO APPLETS EXIBIDO */
-/* Parece ser problema no padding botton definido com style diretamente no html */
-/* Fazer @media para o tamanho exato dos applets, so que não será na main. */
-/* .container-principal .applet-geogebra-cel,
-.container-principal .applet-geogebra-desk{
-    position: relative;
-    height: 0;
-    overflow: hidden;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
-    background-color: black;
-    display: flex;
-    justify-content: center;                
-}
-.container-principal .applet-geogebra-cel iframe,
-.container-principal .applet-geogebra-desk iframe {
-    max-width: 100%;   
-}
-
-
-.container-principal .applet-geogebra-cel {
-    position: absolute;
-    top: 0;
-    visibility: hidden;
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .container-principal .applet-desktop {
-}
-
-.container-principal .applet-celular {
-    visibility: hidden ;
-    position: absolute;
-} */
-
-
-/* @media (max-width: 1000px) {
-    .container-principal .applet-geogebra-desk {
-        position: absolute;
-        top: 0;
-        visibility: hidden;
-    }
-    
-    .container-principal .applet-geogebra-cel {
-        position: static;
-        visibility: visible;
-    }
-} */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
