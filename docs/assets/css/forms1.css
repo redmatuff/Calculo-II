@@ -1,0 +1,65 @@
+.container-selec-form {
+    display: flex;
+    justify-content: center;
+    margin: 5rem;
+}
+.selec-form {
+    border: solid 2px rgba(128, 128, 128, 0.568);
+    padding: 0.5rem;
+    max-width: 40rem;
+}
+
+.container-forms {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.form,
+.form-p {
+    flex: 1;
+    padding: 0.2rem;
+    margin: 0.4rem;
+    border: solid 1px gray;
+    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.651);
+    text-align: center;
+    font-weight: 800;
+    font-size: 0.85rem;
+    word-break: break-word;
+    hyphens: auto;
+    background-color: white;
+    color: rgb(100, 50, 50);
+}
+.form {
+    min-width: 6rem;
+}
+.form-p{
+    min-width: 3.5rem;
+}
+
+.form-area {
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0.5rem;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+.area-montagem {
+    display: flex;  
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 1rem;
+    padding: 1rem;
+    min-height: 5rem;
+    border: solid 10px rgb(31, 0, 0);
+    background-color: rgb(25, 80, 55);
+    margin: 1rem;
+    box-shadow: 2px 2px 3px 3px rgba(0, 0, 0, 0.651);
+}
+
+/*TODO: Responsividade reduzindo a fonte dos form e form-area em telas pequenas */
