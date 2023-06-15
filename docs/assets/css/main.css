@@ -119,6 +119,21 @@ strong{
     color: black;
 }
 
+.roteiro{
+    border: solid 5px black;
+    margin: 0.5rem 0;
+}
+.roteiro-parte{
+    border: solid 5px red;
+    margin: 2.5rem 0;
+    padding: 1rem;
+}
+
+.txt-roteiro {
+    background-color: yellow;
+    color: black;
+}
+
 /* Exibição e responsividade de fórmulas matemáticas */
 .mat-em-bloco-mult{
     display: block;
