@@ -1,4 +1,4 @@
-# Cálculo Diferencial - Funções de Várias Variáveis e Equações Diferenciais Ordinárias (em andamento)
+# Cálculo II GMA - Funções de Várias Variáveis e Equações Diferenciais Ordinárias (em andamento)
 
 <div>Material didático oferecido como suporte a alunos e professores na disciplina de Cálculo 2.
 
